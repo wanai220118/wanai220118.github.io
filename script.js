@@ -130,21 +130,41 @@ window.addEventListener("scroll", () => {
 });
 
 // Typing Effect for Tagline
-const tagline = document.querySelector(".hero h2");
-const text = tagline.textContent;
-tagline.textContent = "";
-let i = 0;
+const tagline = document.querySelector(".tagline");
+if (tagline) {
+  const text = tagline.textContent;
+  tagline.textContent = "";
+  let i = 0;
 
-function typeWriter() {
-  if (i < text.length) {
-    tagline.textContent += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, 100);
+  function typeWriter() {
+    if (i < text.length) {
+      tagline.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 100);
+    }
   }
+
+  // Start typing effect after a short delay
+  setTimeout(typeWriter, 500);
 }
 
-// Start typing effect after a short delay
-setTimeout(typeWriter, 500);
+// Tabs Functionality
+const tabBtns = document.querySelectorAll(".tab-btn");
+const tabPanes = document.querySelectorAll(".tab-pane");
+
+tabBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const targetTab = btn.getAttribute("data-tab");
+
+    // Remove active class from all buttons and panes
+    tabBtns.forEach((b) => b.classList.remove("active"));
+    tabPanes.forEach((pane) => pane.classList.remove("active"));
+
+    // Add active class to clicked button and corresponding pane
+    btn.classList.add("active");
+    document.getElementById(targetTab).classList.add("active");
+  });
+});
 
 // Close mobile menu when clicking outside
 document.addEventListener("click", (e) => {
@@ -164,4 +184,40 @@ document.addEventListener("keydown", (e) => {
     menuIcon.classList.add("fa-bars");
     menuIcon.classList.remove("fa-times");
   }
+});
+
+// Add animation to stat cards on scroll
+const statCards = document.querySelectorAll(".stat-card h3");
+const animateValue = (element, start, end, duration) => {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    const value = Math.floor(progress * (end - start) + start);
+    element.textContent = value + "+";
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+};
+
+const statObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const targetText = entry.target.textContent;
+        const targetNumber = parseInt(targetText);
+        if (!isNaN(targetNumber)) {
+          animateValue(entry.target, 0, targetNumber, 2000);
+          statObserver.unobserve(entry.target);
+        }
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+statCards.forEach((card) => {
+  statObserver.observe(card);
 });

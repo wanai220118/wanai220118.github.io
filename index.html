@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tuan Khalidah Syazwana | System Developer</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,6 +18,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -36,10 +38,25 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
+            <div class="hero-image-container">
+                <div class="hero-image-wrapper">
+                    <img src="assets/images/gambar-passport.png" alt="Tuan Khalidah Syazwana" class="hero-image">
+                    <div class="hero-image-border"></div>
+                </div>
+            </div>
             <h1>TUAN KHALIDAH SYAZWANA</h1>
-            <h2>System Developer</h2>
-            <p>Passionate about creating functional, user-centered digital solutions with experience across web, mobile,
-                and data-driven projects. I bridge technical innovation and exceptional user experience.</p>
+            <h2 class="tagline">System Developer</h2>
+            <p class="hero-description">Passionate about creating functional, user-centered digital solutions with
+                experience across web, mobile, and data-driven projects. I bridge technical innovation and exceptional
+                user experience.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+                <a href="#projects" class="btn-secondary">
+                    <i class="fas fa-briefcase"></i> View Projects
+                </a>
+            </div>
             <div class="social-links">
                 <a href="mailto:tuankhalidah@gmail.com" class="social-btn" aria-label="Email">
                     <i class="fas fa-envelope"></i>
@@ -82,14 +99,151 @@
                     <p>Projects</p>
                 </div>
                 <div class="stat-card">
-                    <i class="fas fa-tools"></i>
-                    <h3>15+</h3>
-                    <p>Technologies</p>
+                    <i class="fas fa-certificate"></i>
+                    <h3>10+</h3>
+                    <p>Certificates</p>
                 </div>
                 <div class="stat-card">
                     <i class="fas fa-graduation-cap"></i>
                     <h3>Active</h3>
                     <p>Learner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section fade-in">
+        <div class="section-header">
+            <h2>Experience & Education</h2>
+            <p>My professional journey and academic background</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="work">
+                <i class="fas fa-briefcase"></i> Work Experience
+            </button>
+            <button class="tab-btn" data-tab="education">
+                <i class="fas fa-graduation-cap"></i> Education
+            </button>
+            <button class="tab-btn" data-tab="certificates">
+                <i class="fas fa-certificate"></i> Certificates
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Work Experience Tab -->
+            <div class="tab-pane active" id="work">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>System Developer Intern</h3>
+                                <span class="company"><i class="fas fa-building"></i> MAIDAM</span>
+                            </div>
+                            <div class="timeline-date">
+                                <i class="far fa-calendar"></i> April 2025 - January 2026
+                            </div>
+                            <p>Gained hands-on experience in system development, working on real-world projects and
+                                collaborating with professional development teams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Tab -->
+            <div class="tab-pane" id="education">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Bachelor of Computer Science (Software Engineering) with Honours</h3>
+                                <span class="company"><i class="fas fa-university"></i> Universiti Tun Hussein Onn
+                                    Malaysia</span>
+                            </div>
+                            <div class="timeline-date">
+                                <i class="far fa-calendar"></i> October 2022 - January 2026
+                            </div>
+                            <p>Comprehensive study in software engineering principles, algorithms, data structures, and
+                                modern development practices.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Malaysian Certificate of Education (SPM)</h3>
+                                <span class="company"><i class="fas fa-school"></i> SMK Agama Dato' Haji Abbas</span>
+                            </div>
+                            <div class="timeline-date">
+                                <i class="far fa-calendar"></i> January 2016 - March 2021
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-trophy"></i> Grade: 7A
+                            </div>
+                            <p>Specialized in Biology/Biological Sciences with outstanding academic performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificates Tab -->
+            <div class="tab-pane" id="certificates">
+                <div class="certificates-grid">
+                    <div class="certificate-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Data Mining and Decision Making: Predictive Analytics for Business Strategies</h4>
+                        <span class="cert-date">May 2025</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h4>Data Structures & Algorithms in Python: Sorting Algorithms</h4>
+                        <span class="cert-date">May 2025</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>Power BI Data Modelling Basics Tutorial Course</h4>
+                        <span class="cert-date">December 2024</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-analytics"></i>
+                        <h4>Power BI for Beginners</h4>
+                        <span class="cert-date">November 2024</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-database"></i>
+                        <h4>SAS Visual Analytics 1 for SAS Viya: Basics</h4>
+                        <span class="cert-date">November 2024</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-server"></i>
+                        <h4>SAS Viya Overview</h4>
+                        <span class="cert-date">November 2024</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h4>CCNA: Introduction to Networks</h4>
+                        <span class="cert-date">August 2024</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-landmark"></i>
+                        <h4>Seminar Pemuliharaan Senibina Warisan</h4>
+                        <span class="cert-date">August 2024</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-user-tie"></i>
+                        <h4>RHB X-CEL Star Mentoring Programme (Cohort 3)</h4>
+                        <span class="cert-date">December 2023</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-comments"></i>
+                        <h4>RHB X-Cel Star English Communications & Confidence Training</h4>
+                        <span class="cert-date">August 2022</span>
+                    </div>
                 </div>
             </div>
         </div>
