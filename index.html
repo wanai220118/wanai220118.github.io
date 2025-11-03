@@ -5,137 +5,305 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tuan Khalidah Syazwana | System Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- ====== NAVBAR ====== -->
-    <header class="navbar">
-        <div class="logo">Tuan Khalidah Syazwana</div>
-        <nav id="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <a href="assets/pdf/resume.pdf" class="resume-btn" download>📄 Resume</a>
-        </nav>
-        <div class="nav-icons">
-            <button id="theme-toggle">🌙</button>
-            <button id="menu-toggle">☰</button>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">TKS</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="resume-btn"><i class="fas fa-download"></i> Resume</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- ====== HOME ====== -->
-    <section id="home" class="section fade-in">
-        <h1>TUAN KHALIDAH SYAZWANA BINTI TUAN MOHD KASMAWI</h1>
-        <h2 class="tagline">System Developer</h2>
-        <p class="bio">I am an aspiring System Developer passionate about creating functional, user-centered digital
-            solutions.
-            With experience across web, mobile, and data-driven projects, I aim to bridge technical innovation and user
-            experience.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>TUAN KHALIDAH SYAZWANA</h1>
+            <h2>System Developer</h2>
+            <p>Passionate about creating functional, user-centered digital solutions with experience across web, mobile,
+                and data-driven projects. I bridge technical innovation and exceptional user experience.</p>
+            <div class="social-links">
+                <a href="mailto:tuankhalidah@gmail.com" class="social-btn" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/tuan-khalidah-syazwana/" target="_blank" class="social-btn"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/wanai220118" target="_blank" class="social-btn" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- ====== ABOUT ====== -->
+    <!-- About Section -->
     <section id="about" class="section fade-in">
-        <h2>About Me</h2>
-        <p>Hi, I'm Tuan Khalidah Syazwana, a dedicated system developer with experience in full-stack web and mobile
-            development.
-            I enjoy solving real-world problems through clean code, intuitive design, and efficient system architecture.
-        </p>
+        <div class="section-header">
+            <h2>About Me</h2>
+            <p>Dedicated system developer with a passion for solving real-world problems</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hi, I'm Tuan Khalidah Syazwana, a dedicated system developer with comprehensive experience in
+                    full-stack web and mobile development. I thrive on solving real-world problems through clean,
+                    efficient code and intuitive design.</p>
+                <p>My expertise spans across multiple programming languages and frameworks, allowing me to build
+                    scalable solutions that prioritize both functionality and user experience. I'm constantly learning
+                    and adapting to new technologies to deliver cutting-edge solutions.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <i class="fas fa-code"></i>
+                    <h3>10+</h3>
+                    <p>Languages</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>8+</h3>
+                    <p>Projects</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>15+</h3>
+                    <p>Technologies</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Active</h3>
+                    <p>Learner</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- ====== SKILLS ====== -->
+    <!-- Skills Section -->
     <section id="skills" class="section fade-in">
-        <h2>Skills</h2>
+        <div class="section-header">
+            <h2>Technical Skills</h2>
+            <p>A comprehensive toolkit for building modern applications</p>
+        </div>
         <div class="skills-grid">
-            <div>
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
                 <h3>Languages</h3>
-                <p>Python, SQL, Java, JavaScript, C, C++, HTML, CSS, PHP, R, XML</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">C/C++</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">R</span>
+                </div>
             </div>
-            <div>
-                <h3>Frameworks & Libraries</h3>
-                <p>Pandas, Bootstrap, Laravel</p>
+            <div class="skill-card">
+                <i class="fas fa-layer-group"></i>
+                <h3>Frameworks</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Laravel</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">Pandas</span>
+                </div>
             </div>
-            <div>
+            <div class="skill-card">
+                <i class="fas fa-tools"></i>
                 <h3>Tools & Technologies</h3>
-                <p>Excel, PowerPoint, Git, GitHub, Laragon, Firebase, MySQL, XAMPP</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git/GitHub</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">XAMPP</span>
+                    <span class="skill-tag">Excel</span>
+                </div>
             </div>
-            <div>
-                <h3>Platforms & IDEs</h3>
-                <p>VS Code, IntelliJ IDEA, Android Studio, RStudio, DEV C++, Linux</p>
+            <div class="skill-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>IDEs & Platforms</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">IntelliJ</span>
+                    <span class="skill-tag">Android Studio</span>
+                    <span class="skill-tag">RStudio</span>
+                    <span class="skill-tag">Linux</span>
+                </div>
             </div>
-            <div>
+            <div class="skill-card">
+                <i class="fas fa-users"></i>
                 <h3>Soft Skills</h3>
-                <p>Communication, Problem-Solving, Teamwork, Adaptability, Time Management, Critical Thinking,
-                    Leadership, Creativity</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Communication</span>
+                    <span class="skill-tag">Teamwork</span>
+                    <span class="skill-tag">Problem-Solving</span>
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Adaptability</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ====== PROJECTS ====== -->
+    <!-- Projects Section -->
     <section id="projects" class="section fade-in">
-        <h2>Projects</h2>
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p>A showcase of my recent work and achievements</p>
+        </div>
         <div class="projects-grid">
-            <div class="card">
-                <h3>GlowGuide Mobile Application</h3>
-                <p>Developed a mobile app integrating e-commerce and online consultation booking with a Laravel admin
-                    panel and real-time data sync.</p>
-                <span>October 2024 - Current</span>
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>GlowGuide Mobile Application</h3>
+                </div>
+                <div class="project-body">
+                    <p>Comprehensive mobile app integrating e-commerce and online consultation booking with Laravel
+                        admin panel and real-time data synchronization.</p>
+                    <div class="project-date">
+                        <i class="far fa-calendar"></i>
+                        <span>October 2024 - Current</span>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Image-Based Detection of Rice Leaf Diseases Using CNN</h3>
-                <p>Implemented CNN models for classifying rice leaf diseases with automated image preprocessing and
-                    evaluation.</p>
-                <span>June 2025</span>
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>Rice Leaf Disease Detection</h3>
+                </div>
+                <div class="project-body">
+                    <p>Implemented CNN models for classifying rice leaf diseases with automated image preprocessing and
+                        comprehensive model evaluation.</p>
+                    <div class="project-date">
+                        <i class="far fa-calendar"></i>
+                        <span>June 2025</span>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Predicting Diabetes with Classification Algorithms</h3>
-                <p>Developed predictive models using Random Forest, Logistic Regression, and KNN to improve diabetes
-                    prediction accuracy.</p>
-                <span>May 2025</span>
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Diabetes Prediction System</h3>
+                </div>
+                <div class="project-body">
+                    <p>Developed predictive models using Random Forest, Logistic Regression, and KNN to improve diabetes
+                        prediction accuracy.</p>
+                    <div class="project-date">
+                        <i class="far fa-calendar"></i>
+                        <span>May 2025</span>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Evaluating Shortest Path Solutions</h3>
-                <p>Compared Dijkstra’s, BFS, and DFS algorithms for performance and accuracy on different graph
-                    structures.</p>
-                <span>April 2025</span>
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-route"></i>
+                    <h3>Shortest Path Algorithm Analysis</h3>
+                </div>
+                <div class="project-body">
+                    <p>Compared Dijkstra's, BFS, and DFS algorithms for performance and accuracy on different graph
+                        structures.</p>
+                    <div class="project-date">
+                        <i class="far fa-calendar"></i>
+                        <span>April 2025</span>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Analyzing Air Quality and Health Impact in India</h3>
-                <p>Used Power BI and DAX to visualize air quality data and assess health implications through analytics
-                    techniques.</p>
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-wind"></i>
+                    <h3>Air Quality Analysis India</h3>
+                </div>
+                <div class="project-body">
+                    <p>Used Power BI and DAX to visualize air quality data and assess health implications through
+                        advanced analytics techniques.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>E-KOOP Inventory Web Based System</h3>
-                <p>Built a web-based inventory system using relational databases for efficient product and stock
-                    management.</p>
-                <span>July 2024 - January 2025</span>
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-warehouse"></i>
+                    <h3>E-KOOP Inventory System</h3>
+                </div>
+                <div class="project-body">
+                    <p>Built a web-based inventory system using relational databases for efficient product and stock
+                        management.</p>
+                    <div class="project-date">
+                        <i class="far fa-calendar"></i>
+                        <span>July 2024 - January 2025</span>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Tic-Tac-Toe Game App</h3>
-                <p>Developed an interactive Java-based Tic Tac Toe game with GUI and game logic.</p>
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Tic-Tac-Toe Game</h3>
+                </div>
+                <div class="project-body">
+                    <p>Developed an interactive Java-based Tic Tac Toe game with intuitive GUI and robust game logic.
+                    </p>
+                </div>
             </div>
-            <div class="card">
-                <h3>H2OTrack – Smart Resizable Bottle Ring</h3>
-                <p>Designed a smart bottle accessory prototype in Figma focused on sustainable hydration tracking.</p>
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fas fa-tint"></i>
+                    <h3>H2OTrack Smart Bottle Ring</h3>
+                </div>
+                <div class="project-body">
+                    <p>Designed a smart bottle accessory prototype in Figma focused on sustainable hydration tracking.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ====== CONTACT ====== -->
+    <!-- Contact Section -->
     <section id="contact" class="section fade-in">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:tuankhalidah@gmail.com">tuankhalidah@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/tuan-khalidah-syazwana/"
-                target="_blank">linkedin.com/in/tuan-khalidah-syazwana</a></p>
-        <p>GitHub: <a href="https://github.com/wanai220118" target="_blank">github.com/wanai220118</a></p>
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Let's connect and discuss opportunities</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <a href="mailto:tuankhalidah@gmail.com">tuankhalidah@gmail.com</a>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-linkedin"></i>
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/tuan-khalidah-syazwana/" target="_blank">tuan-khalidah-syazwana</a>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+                <a href="https://github.com/wanai220118" target="_blank">wanai220118</a>
+            </div>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Tuan Khalidah Syazwana. All rights reserved.</p>
+        <p>&copy; 2025 Tuan Khalidah Syazwana. All rights reserved.</p>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 
 </html>

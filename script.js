@@ -1,149 +1,134 @@
-// Minimal JS: nav toggle, smooth scroll, active link on scroll, set year
-document.addEventListener("DOMContentLoaded", function () {
-  const nav = document.getElementById("nav");
-  const navToggle = document.getElementById("navToggle");
-  const sections = Array.from(document.querySelectorAll("section[id]"));
-  const yearSpan = document.getElementById("year");
+// Theme Toggle
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+const themeIcon = themeToggle.querySelector("i");
 
-  yearSpan.textContent = new Date().getFullYear();
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  body.classList.add("dark-mode");
+  themeIcon.classList.replace("fa-moon", "fa-sun");
+}
 
-  // Nav toggle for mobile
-  navToggle.addEventListener("click", () => {
-    if (nav.classList.contains("nav-mobile")) {
-      nav.classList.remove("nav-mobile");
-      navToggle.setAttribute("aria-label", "Open menu");
-    } else {
-      nav.classList.add("nav-mobile");
-      navToggle.setAttribute("aria-label", "Close menu");
-    }
-  });
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener("click", function (e) {
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-        // close mobile nav if open
-        if (nav.classList.contains("nav-mobile")) {
-          nav.classList.remove("nav-mobile");
-        }
-      }
-    });
-  });
-
-  // IntersectionObserver to highlight nav links
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const id = entry.target.getAttribute("id");
-        const link = document.querySelector('.nav a[href="#' + id + '"]');
-        if (entry.isIntersecting) {
-          document
-            .querySelectorAll(".nav a")
-            .forEach((n) => n.classList.remove("active"));
-          if (link) link.classList.add("active");
-        }
-      });
-    },
-    { root: null, rootMargin: "0px", threshold: 0.45 }
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  const isDark = body.classList.contains("dark-mode");
+  themeIcon.classList.replace(
+    isDark ? "fa-moon" : "fa-sun",
+    isDark ? "fa-sun" : "fa-moon"
   );
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});
 
-  sections.forEach((section) => observer.observe(section));
+// Mobile Menu Toggle
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const menuIcon = menuToggle.querySelector("i");
 
-  // Theme Toggle
-  const toggleBtn = document.getElementById("theme-toggle");
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("light-theme");
-    toggleBtn.textContent = document.body.classList.contains("light-theme")
-      ? "☀️"
-      : "🌙";
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  menuIcon.classList.toggle("fa-bars");
+  menuIcon.classList.toggle("fa-times");
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    menuIcon.classList.add("fa-bars");
+    menuIcon.classList.remove("fa-times");
   });
+});
 
-  // Mobile Navbar Toggle
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
-
-  // Scroll Fade-in Animation
-  const fadeElems = document.querySelectorAll(".fade-in");
-  window.addEventListener("scroll", () => {
-    fadeElems.forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        el.classList.add("visible");
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (href !== "#" && href.startsWith("#")) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        const offsetTop = target.offsetTop - 70;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
+        });
       }
-    });
-  });
-
-  // Theme toggle (Dark/Light Mode)
-  const toggle = document.getElementById("theme-toggle");
-  const body = document.body;
-
-  // Load saved theme
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark");
-    toggle.textContent = "☀️";
-  }
-
-  toggle.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    const isDark = body.classList.contains("dark");
-    toggle.textContent = isDark ? "☀️" : "🌙";
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  });
-
-  // Simple keyboard accessibility: close nav on escape
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && nav.classList.contains("nav-mobile")) {
-      nav.classList.remove("nav-mobile");
     }
   });
 });
 
-// Theme toggle + persist preference
-(function () {
-  const themeToggle = document.getElementById("themeToggle");
-  const body = document.body;
-  const stored = localStorage.getItem("theme");
+// Scroll Animations
+const fadeElements = document.querySelectorAll(".fade-in");
 
-  function applyTheme(t) {
-    if (t === "dark") {
-      body.classList.add("dark");
-      themeToggle.textContent = "☀️";
-      themeToggle.setAttribute("aria-pressed", "true");
-    } else {
-      body.classList.remove("dark");
-      themeToggle.textContent = "🌙";
-      themeToggle.setAttribute("aria-pressed", "false");
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px",
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
     }
-  }
-
-  // initial: use stored, otherwise prefer system dark
-  if (stored) {
-    applyTheme(stored);
-  } else if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    applyTheme("dark");
-  } else {
-    applyTheme("light");
-  }
-
-  themeToggle.addEventListener("click", () => {
-    const next = body.classList.contains("dark") ? "light" : "dark";
-    applyTheme(next);
-    localStorage.setItem("theme", next);
   });
-})();
+}, observerOptions);
 
-// set current year in footer (if not already present)
-(function () {
-  const y = new Date().getFullYear();
-  const el = document.getElementById("year");
-  if (el) el.textContent = y;
-})();
+fadeElements.forEach((element) => {
+  observer.observe(element);
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById("scrollTop");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add("visible");
+  } else {
+    scrollTopBtn.classList.remove("visible");
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+// Active Navigation Link
+const sections = document.querySelectorAll("section[id]");
+const navItems = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (window.pageYOffset >= sectionTop - 100) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navItems.forEach((item) => {
+    item.classList.remove("active");
+    if (item.getAttribute("href") === `#${current}`) {
+      item.classList.add("active");
+    }
+  });
+});
+
+// Add typing effect to tagline
+const tagline = document.querySelector(".hero h2");
+const text = tagline.textContent;
+tagline.textContent = "";
+let i = 0;
+
+function typeWriter() {
+  if (i < text.length) {
+    tagline.textContent += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 100);
+  }
+}
+
+setTimeout(typeWriter, 500);
