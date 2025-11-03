@@ -27,11 +27,92 @@ body {
     color: var(--text-light);
     background: var(--bg-light);
     transition: all 0.3s ease;
+    position: relative;
+    overflow-x: hidden;
 }
 
 body.dark-mode {
     background: var(--bg-dark);
     color: var(--text-dark);
+}
+
+/* Background Animation */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+    animation: float 20s ease-in-out infinite;
+}
+
+body.dark-mode .shape {
+    opacity: 0.08;
+}
+
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--primary);
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 350px;
+    height: 350px;
+    background: var(--secondary);
+    top: 50%;
+    right: 10%;
+    animation-delay: 5s;
+    animation-duration: 25s;
+}
+
+.shape-3 {
+    width: 300px;
+    height: 300px;
+    background: var(--primary);
+    bottom: 10%;
+    left: 20%;
+    animation-delay: 10s;
+    animation-duration: 30s;
+}
+
+.shape-4 {
+    width: 450px;
+    height: 450px;
+    background: var(--secondary);
+    top: 30%;
+    left: 50%;
+    animation-delay: 15s;
+    animation-duration: 35s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
 }
 
 /* Improved Scrollbar */
@@ -718,6 +799,213 @@ body.dark-mode .certificate-card {
     margin-top: 0.5rem;
 }
 
+.btn-view-cert {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--gradient);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-view-cert:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: var(--card-light);
+    margin: 2% auto;
+    padding: 0;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .modal-content {
+    background: var(--card-dark);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    color: var(--text-light);
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .modal-close {
+    color: var(--text-dark);
+}
+
+.modal-close:hover {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 3rem;
+}
+
+.modal-body h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.modal-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.modal-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modal-screenshots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.modal-screenshots img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--border-light);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+body.dark-mode .modal-screenshots img {
+    border-color: var(--border-dark);
+}
+
+.modal-screenshots img:hover {
+    transform: scale(1.05);
+}
+
+.modal-body p {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.modal-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.modal-tech span {
+    padding: 0.4rem 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.modal-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.modal-btn {
+    padding: 0.8rem 2rem;
+    background: var(--gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.modal-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+/* Certificate Modal */
+.cert-modal-content {
+    max-width: 1200px;
+    background: transparent;
+    padding: 20px;
+}
+
+.cert-modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cert-modal-body img {
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
 /* Skills Section */
 .skills-grid {
     display: grid;
@@ -842,18 +1130,32 @@ body.dark-mode .project-card {
     padding: 2rem;
 }
 
+.project-thumbnail {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-thumbnail {
+    transform: scale(1.05);
+}
+
 .project-body p {
     margin-bottom: 1rem;
     line-height: 1.6;
 }
 
-.project-date {
+.project-date,
+.project-type {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
     opacity: 0.7;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 /* Contact Section */
@@ -1204,5 +1506,35 @@ body.dark-mode footer {
         height: 50px;
         bottom: 1.5rem;
         right: 1.5rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+
+    .modal-body {
+        padding: 2rem 1.5rem;
+    }
+
+    .modal-body h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .modal-screenshots {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-links {
+        flex-direction: column;
+    }
+
+    .modal-btn {
+        justify-content: center;
     }
 }
