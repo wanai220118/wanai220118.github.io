@@ -2,7 +2,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const nav = document.getElementById("nav");
   const navToggle = document.getElementById("navToggle");
-  const navLinks = document.querySelectorAll(".nav-link");
   const sections = Array.from(document.querySelectorAll("section[id]"));
   const yearSpan = document.getElementById("year");
 
@@ -52,6 +51,33 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   sections.forEach((section) => observer.observe(section));
+
+  // Theme Toggle
+  const toggleBtn = document.getElementById("theme-toggle");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+    toggleBtn.textContent = document.body.classList.contains("light-theme")
+      ? "☀️"
+      : "🌙";
+  });
+
+  // Mobile Navbar Toggle
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+
+  // Scroll Fade-in Animation
+  const fadeElems = document.querySelectorAll(".fade-in");
+  window.addEventListener("scroll", () => {
+    fadeElems.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add("visible");
+      }
+    });
+  });
 
   // Theme toggle (Dark/Light Mode)
   const toggle = document.getElementById("theme-toggle");

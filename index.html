@@ -2,147 +2,130 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TUAN KHALIDAH SYAZWANA | System Developer</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan Khalidah Syazwana | System Developer</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Tuan Khalidah Syazwana</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <button id="theme-toggle" title="Toggle dark/light mode">🌙</button>
+    <!-- ====== NAVBAR ====== -->
+    <header class="navbar">
+        <div class="logo">Tuan Khalidah Syazwana</div>
+        <nav id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="assets/pdf/resume.pdf" class="resume-btn" download>📄 Resume</a>
+        </nav>
+        <div class="nav-icons">
+            <button id="theme-toggle">🌙</button>
+            <button id="menu-toggle">☰</button>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Hello, I'm <span>Tuan Khalidah Syazwana</span></h2>
-            <p class="tagline">System Developer</p>
-            <p class="intro">
-                Passionate about crafting efficient systems and innovative digital solutions.
-                Dedicated to continuous learning and improving both front-end and back-end development skills.
-            </p>
-            <a href="assets/pdf/resume.pdf" class="btn" download>📄 Download Résumé</a>
-        </div>
+    <!-- ====== HOME ====== -->
+    <section id="home" class="section fade-in">
+        <h1>TUAN KHALIDAH SYAZWANA BINTI TUAN MOHD KASMAWI</h1>
+        <h2 class="tagline">System Developer</h2>
+        <p class="bio">I am an aspiring System Developer passionate about creating functional, user-centered digital
+            solutions.
+            With experience across web, mobile, and data-driven projects, I aim to bridge technical innovation and user
+            experience.</p>
     </section>
 
-    <section id="about" class="section">
+    <!-- ====== ABOUT ====== -->
+    <section id="about" class="section fade-in">
         <h2>About Me</h2>
-        <p>
-            I’m a motivated system developer with experience in mobile, web, and data-driven projects.
-            I enjoy building user-friendly applications and developing solutions that enhance productivity and user
-            experience.
-            With a strong foundation in programming, frameworks, and analytical tools, I’m committed to learning,
-            adapting,
-            and growing in the ever-evolving tech landscape.
+        <p>Hi, I'm Tuan Khalidah Syazwana, a dedicated system developer with experience in full-stack web and mobile
+            development.
+            I enjoy solving real-world problems through clean code, intuitive design, and efficient system architecture.
         </p>
     </section>
 
-    <section id="skills" class="section">
+    <!-- ====== SKILLS ====== -->
+    <section id="skills" class="section fade-in">
         <h2>Skills</h2>
         <div class="skills-grid">
-            <div><strong>Languages:</strong> Python, SQL, Java, JavaScript, C, C++, HTML, CSS, PHP, R, XML</div>
-            <div><strong>Frameworks & Libraries:</strong> Pandas, Bootstrap, Laravel</div>
-            <div><strong>Tools & Technologies:</strong> Excel, PowerPoint, Git, GitHub, Laragon, Firebase, MySQL, XAMPP
+            <div>
+                <h3>Languages</h3>
+                <p>Python, SQL, Java, JavaScript, C, C++, HTML, CSS, PHP, R, XML</p>
             </div>
-            <div><strong>Platforms & IDEs:</strong> VS Code, IntelliJ IDEA, Android Studio, RStudio, DEV C++, Linux
+            <div>
+                <h3>Frameworks & Libraries</h3>
+                <p>Pandas, Bootstrap, Laravel</p>
             </div>
-            <div><strong>Soft Skills:</strong> Communication, Problem-Solving, Teamwork, Adaptability, Time Management,
-                Critical Thinking, Leadership, Creativity</div>
+            <div>
+                <h3>Tools & Technologies</h3>
+                <p>Excel, PowerPoint, Git, GitHub, Laragon, Firebase, MySQL, XAMPP</p>
+            </div>
+            <div>
+                <h3>Platforms & IDEs</h3>
+                <p>VS Code, IntelliJ IDEA, Android Studio, RStudio, DEV C++, Linux</p>
+            </div>
+            <div>
+                <h3>Soft Skills</h3>
+                <p>Communication, Problem-Solving, Teamwork, Adaptability, Time Management, Critical Thinking,
+                    Leadership, Creativity</p>
+            </div>
         </div>
     </section>
 
-    <section id="projects" class="section">
+    <!-- ====== PROJECTS ====== -->
+    <section id="projects" class="section fade-in">
         <h2>Projects</h2>
         <div class="projects-grid">
-
-            <div class="project-card">
+            <div class="card">
                 <h3>GlowGuide Mobile Application</h3>
-                <p><em>October 2024 - Current</em></p>
-                <ul>
-                    <li>Developed a mobile application integrating both e-commerce and consultation booking features.
-                    </li>
-                    <li>Built an admin panel using Laravel for managing users, products, and bookings.</li>
-                    <li>Currently enhancing the app in Android Studio with real-time data sync.</li>
-                </ul>
+                <p>Developed a mobile app integrating e-commerce and online consultation booking with a Laravel admin
+                    panel and real-time data sync.</p>
+                <span>October 2024 - Current</span>
             </div>
-
-            <div class="project-card">
-                <h3>Image-Based Detection of Rice Leaf Diseases Using Deep CNN Models</h3>
-                <p><em>June 2025</em></p>
-                <ul>
-                    <li>Implemented CNN models to classify and detect rice leaf diseases.</li>
-                    <li>Applied preprocessing, training, and evaluation for high accuracy.</li>
-                </ul>
+            <div class="card">
+                <h3>Image-Based Detection of Rice Leaf Diseases Using CNN</h3>
+                <p>Implemented CNN models for classifying rice leaf diseases with automated image preprocessing and
+                    evaluation.</p>
+                <span>June 2025</span>
             </div>
-
-            <div class="project-card">
-                <h3>Predicting Diabetes with Classification Algorithm</h3>
-                <p><em>May 2025</em></p>
-                <ul>
-                    <li>Built predictive models using Random Forest, Logistic Regression, and KNN.</li>
-                    <li>Applied feature selection and evaluation to improve accuracy.</li>
-                </ul>
+            <div class="card">
+                <h3>Predicting Diabetes with Classification Algorithms</h3>
+                <p>Developed predictive models using Random Forest, Logistic Regression, and KNN to improve diabetes
+                    prediction accuracy.</p>
+                <span>May 2025</span>
             </div>
-
-            <div class="project-card">
+            <div class="card">
                 <h3>Evaluating Shortest Path Solutions</h3>
-                <p><em>April 2025</em></p>
-                <ul>
-                    <li>Compared Dijkstra’s, BFS, and DFS algorithms for efficiency.</li>
-                    <li>Evaluated complexity and performance across datasets.</li>
-                </ul>
+                <p>Compared Dijkstra’s, BFS, and DFS algorithms for performance and accuracy on different graph
+                    structures.</p>
+                <span>April 2025</span>
             </div>
-
-            <div class="project-card">
-                <h3>Analyzing Air Quality And Health Impact In India</h3>
-                <ul>
-                    <li>Used Power BI and DAX formulas to visualize and analyze data.</li>
-                    <li>Assessed health implications with descriptive to prescriptive analytics.</li>
-                </ul>
+            <div class="card">
+                <h3>Analyzing Air Quality and Health Impact in India</h3>
+                <p>Used Power BI and DAX to visualize air quality data and assess health implications through analytics
+                    techniques.</p>
             </div>
-
-            <div class="project-card">
+            <div class="card">
                 <h3>E-KOOP Inventory Web Based System</h3>
-                <p><em>January 2025 - July 2024</em></p>
-                <ul>
-                    <li>Developed a web system to manage inventory efficiently.</li>
-                    <li>Used relational databases for accurate stock management.</li>
-                </ul>
+                <p>Built a web-based inventory system using relational databases for efficient product and stock
+                    management.</p>
+                <span>July 2024 - January 2025</span>
             </div>
-
-            <div class="project-card">
+            <div class="card">
                 <h3>Tic-Tac-Toe Game App</h3>
-                <ul>
-                    <li>Built an interactive game using Java with GUI components.</li>
-                    <li>Implemented game logic for a fun player experience.</li>
-                </ul>
+                <p>Developed an interactive Java-based Tic Tac Toe game with GUI and game logic.</p>
             </div>
-
-            <div class="project-card">
+            <div class="card">
                 <h3>H2OTrack – Smart Resizable Bottle Ring</h3>
-                <ul>
-                    <li>Designed an innovative prototype using Figma.</li>
-                    <li>Focused on sustainable hydration tracking solutions.</li>
-                </ul>
+                <p>Designed a smart bottle accessory prototype in Figma focused on sustainable hydration tracking.</p>
             </div>
-
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- ====== CONTACT ====== -->
+    <section id="contact" class="section fade-in">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:tuankhalidah@gmail.com">tuankhalidah@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/tuan-khalidah-syazwana/"
@@ -151,7 +134,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Tuan Khalidah Syazwana. All Rights Reserved.</p>
+        <p>© 2025 Tuan Khalidah Syazwana. All rights reserved.</p>
     </footer>
 </body>
 
