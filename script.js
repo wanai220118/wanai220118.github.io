@@ -60,3 +60,47 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Theme toggle + persist preference
+(function () {
+  const themeToggle = document.getElementById("themeToggle");
+  const body = document.body;
+  const stored = localStorage.getItem("theme");
+
+  function applyTheme(t) {
+    if (t === "dark") {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀️";
+      themeToggle.setAttribute("aria-pressed", "true");
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "🌙";
+      themeToggle.setAttribute("aria-pressed", "false");
+    }
+  }
+
+  // initial: use stored, otherwise prefer system dark
+  if (stored) {
+    applyTheme(stored);
+  } else if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    applyTheme("dark");
+  } else {
+    applyTheme("light");
+  }
+
+  themeToggle.addEventListener("click", () => {
+    const next = body.classList.contains("dark") ? "light" : "dark";
+    applyTheme(next);
+    localStorage.setItem("theme", next);
+  });
+})();
+
+// set current year in footer (if not already present)
+(function () {
+  const y = new Date().getFullYear();
+  const el = document.getElementById("year");
+  if (el) el.textContent = y;
+})();
