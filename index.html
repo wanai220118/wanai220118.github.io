@@ -4,19 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Tuan Khalidah Syazwana | System Developer</title>
+    <meta name="description"
+        content="Tuan Khalidah Syazwana - System Developer Portfolio. Showcasing web development, mobile applications, and data-driven projects with expertise in Java, Python, Laravel, and more.">
+    <meta name="keywords"
+        content="System Developer, Software Engineer, Web Developer, Mobile App Developer, Portfolio, Tuan Khalidah Syazwana">
+    <meta name="author" content="Tuan Khalidah Syazwana">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tuan Khalidah Syazwana | System Developer">
+    <meta property="og:description"
+        content="System Developer passionate about creating functional, user-centered digital solutions">
+    <meta property="og:image" content="assets/images/gambar-passport.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Tuan Khalidah Syazwana | System Developer">
+    <meta property="twitter:description"
+        content="System Developer passionate about creating functional, user-centered digital solutions">
+
+    <title>Tuan Khalidah Syazwana | System Developer</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png" style="border-radius: 50%;">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Devicon for Tech Stack Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics - Replace with your tracking ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // Replace with your Google Analytics ID
+    </script>
 </head>
 
 <body>
-    <!-- Background Animation -->
+    <!-- Animated Background -->
     <div class="bg-animation">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
         <div class="shape shape-3"></div>
         <div class="shape shape-4"></div>
+        <div class="particles" id="particles"></div>
     </div>
 
     <!-- Navbar -->
@@ -85,12 +120,12 @@
                     aria-label="Instagram" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://x.com/jennaira_me?t=iLVKAPf2TLbxORj2gTS0kw&s=09" target="_blank" class="social-btn"
-                    aria-label="X (Twitter)" title="X">
+                <a href="https://x.com/jennaira_me" target="_blank" class="social-btn" aria-label="X"
+                    title="X (Twitter)">
                     <i class="fab fa-x-twitter"></i>
                 </a>
-                <a href="https://www.tiktok.com/@tksyzwna?_r=1&_t=ZS-915ltVKQDbQ" target="_blank" class="social-btn"
-                    aria-label="TikTok" title="TikTok">
+                <a href="https://www.tiktok.com/@tksyzwna" target="_blank" class="social-btn" aria-label="TikTok"
+                    title="TikTok">
                     <i class="fab fa-tiktok"></i>
                 </a>
             </div>
@@ -137,389 +172,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section fade-in">
-        <div class="section-header">
-            <h2>Experience & Education</h2>
-            <p>My professional journey and academic background</p>
-        </div>
-
-        <!-- Tabs -->
-        <div class="tabs">
-            <button class="tab-btn active" data-tab="work">
-                <i class="fas fa-briefcase"></i> Work Experience
-            </button>
-            <button class="tab-btn" data-tab="education">
-                <i class="fas fa-graduation-cap"></i> Education
-            </button>
-            <button class="tab-btn" data-tab="certificates">
-                <i class="fas fa-certificate"></i> Certificates
-            </button>
-        </div>
-
-        <!-- Tab Content -->
-        <div class="tab-content">
-            <!-- Work Experience Tab -->
-            <div class="tab-pane active" id="work">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="experience-header">
-                                <img src="assets/images/dummy.png" alt="MAIDAM" class="experience-logo">
-                                <div class="experience-info">
-                                    <h3>System Developer Intern</h3>
-                                    <span class="company"><i class="fas fa-building"></i> MAIDAM</span>
-                                    <div class="timeline-date">
-                                        <i class="far fa-calendar"></i> April 2025 - January 2026
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Gaining hands-on experience in system development, working on real-world projects and
-                                collaborating with professional development teams.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Education Tab -->
-            <div class="tab-pane" id="education">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="experience-header">
-                                <img src="assets/images/dummy.png" alt="UTHM" class="experience-logo">
-                                <div class="experience-info">
-                                    <h3>Bachelor of Computer Science (Software Engineering) with Honours</h3>
-                                    <span class="company"><i class="fas fa-university"></i> Tun Hussein Onn University
-                                        of Malaysia, Johor</span>
-                                    <div class="timeline-date">
-                                        <i class="far fa-calendar"></i> October 2022 - Current
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="achievement">
-                                <i class="fas fa-star"></i> Current CGPA: 3.42
-                            </div>
-                            <p>Comprehensive study in software engineering principles, algorithms, data structures, and
-                                modern development practices.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="experience-header">
-                                <img src="assets/images/dummy.png" alt="Matriculation" class="experience-logo">
-                                <div class="experience-info">
-                                    <h3>Pre-University Studies</h3>
-                                    <span class="company"><i class="fas fa-school"></i> Pahang Matriculation College,
-                                        Pahang</span>
-                                    <div class="timeline-date">
-                                        <i class="far fa-calendar"></i> October 2021 - July 2022
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="achievement">
-                                <i class="fas fa-star"></i> Science Stream (Physical Science) - GPA: 3.63
-                            </div>
-                            <p>Focused on physical sciences preparing for tertiary education in computer science and
-                                engineering.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="experience-header">
-                                <img src="assets/images/dummy.png" alt="SMK Agama" class="experience-logo">
-                                <div class="experience-info">
-                                    <h3>Malaysian Certificate of Education (SPM)</h3>
-                                    <span class="company"><i class="fas fa-school"></i> SMK Agama Dato' Haji Abbas,
-                                        Terengganu</span>
-                                    <div class="timeline-date">
-                                        <i class="far fa-calendar"></i> January 2019 - February 2021
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="achievement">
-                                <i class="fas fa-trophy"></i> 7A 3B 1C
-                            </div>
-                            <p>Strong foundation in sciences and mathematics with excellent academic performance.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certificates Tab -->
-            <div class="tab-pane" id="certificates">
-                <div class="certificates-grid">
-                    <div class="certificate-card">
-                        <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
-                        <i class="fas fa-chart-line"></i>
-                        <h4>Data Mining and Decision Making: Predictive Analytics for Business Strategies</h4>
-                        <span class="cert-date">May 2025</span>
-                        <button class="btn-view-cert" onclick="viewCertificate('cert1')">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </button>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
-                        <i class="fas fa-code-branch"></i>
-                        <h4>Data Structures & Algorithms in Python: Sorting Algorithms</h4>
-                        <span class="cert-date">May 2025</span>
-                        <button class="btn-view-cert" onclick="viewCertificate('cert2')">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </button>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
-                        <i class="fas fa-chart-bar"></i>
-                        <h4>Power BI Data Modelling Basics Tutorial Course</h4>
-                        <span class="cert-date">December 2024</span>
-                        <button class="btn-view-cert" onclick="viewCertificate('cert3')">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </button>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
-                        <i class="fas fa-analytics"></i>
-                        <h4>Power BI for Beginners</h4>
-                        <span class="cert-date">November 2024</span>
-                        <button class="btn-view-cert" onclick="viewCertificate('cert4')">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </button>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
-                        <i class="fas fa-database"></i>
-                        <h4>SAS Visual Analytics 1 for SAS Viya: Basics</h4>
-                        <span class="cert-date">November 2024</span>
-                        <button class="btn-view-cert" onclick="viewCertificate('cert5')">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </button>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
-                        <i class="fas fa-server"></i>
-                        <h4>SAS Viya Overview</h4>
-                        <span class="cert-date">November 2024</span>
-                        <button class="btn-view-cert" onclick="viewCertificate('cert6')">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </button>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
-                        <i class="fas fa-network-wired"></i>
-                        <h4>CCNA: Introduction to Networks</h4>
-                        <span class="cert-date">August 2024</span>
-                        <button class="btn-view-cert" onclick="viewCertificate('cert7')">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </button>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
-                        <i class="fas fa-landmark"></i>
-                        <h4>Seminar Pemuliharaan Senibina Warisan</h4>
-                        <span class="cert-date">August 2024</span>
-                        <button class="btn-view-cert" onclick="viewCertificate('cert8')">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </button>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
-                        <i class="fas fa-user-tie"></i>
-                        <h4>RHB X-CEL Star Mentoring Programme (Cohort 3)</h4>
-                        <span class="cert-date">December 2023</span>
-                        <button class="btn-view-cert" onclick="viewCertificate('cert9')">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </button>
-                    </div>
-                    <div class="certificate-card">
-                        <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
-                        <i class="fas fa-comments"></i>
-                        <h4>RHB X-Cel Star English Communications & Confidence Training</h4>
-                        <span class="cert-date">August 2022</span>
-                        <button class="btn-view-cert" onclick="viewCertificate('cert10')">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section fade-in">
-        <div class="section-header">
-            <h2>Technical Skills</h2>
-            <p>A comprehensive toolkit for building modern applications</p>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fas fa-code"></i>
-                <h3>Languages</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">C/C++</span>
-                    <span class="skill-tag">PHP</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">R</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-layer-group"></i>
-                <h3>Frameworks</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Laravel</span>
-                    <span class="skill-tag">Bootstrap</span>
-                    <span class="skill-tag">Pandas</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-tools"></i>
-                <h3>Tools & Technologies</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Git/GitHub</span>
-                    <span class="skill-tag">Firebase</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">XAMPP</span>
-                    <span class="skill-tag">Laragon</span>
-                    <span class="skill-tag">Excel</span>
-                    <span class="skill-tag">Kali Linux</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>IDEs & Platforms</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">VS Code</span>
-                    <span class="skill-tag">IntelliJ</span>
-                    <span class="skill-tag">Android Studio</span>
-                    <span class="skill-tag">RStudio</span>
-                    <span class="skill-tag">Linux</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-users"></i>
-                <h3>Soft Skills</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Communication</span>
-                    <span class="skill-tag">Teamwork</span>
-                    <span class="skill-tag">Problem-Solving</span>
-                    <span class="skill-tag">Leadership</span>
-                    <span class="skill-tag">Adaptability</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section fade-in">
-        <div class="section-header">
-            <h2>Featured Projects</h2>
-            <p>A showcase of my recent work and achievements</p>
-        </div>
-        <div class="projects-grid" id="projectsGrid">
-            <!-- Projects will be dynamically loaded here -->
-        </div>
-    </section>
-
-    <!-- Project Modal -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <div class="modal-body">
-                <h2 id="modalTitle"></h2>
-                <div class="modal-meta">
-                    <span id="modalDate"></span>
-                    <span id="modalType"></span>
-                </div>
-                <div class="modal-screenshots" id="modalScreenshots"></div>
-                <p id="modalDescription"></p>
-                <div class="modal-tech" id="modalTech"></div>
-                <div class="modal-links">
-                    <a href="#" id="modalGithub" target="_blank" class="modal-btn">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Certificate Modal -->
-    <div id="certificateModal" class="modal">
-        <div class="modal-content cert-modal-content">
-            <span class="modal-close">&times;</span>
-            <div class="cert-modal-body">
-                <img id="certFullImage" src="" alt="Certificate">
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section fade-in">
-        <div class="section-header">
-            <h2>Get In Touch</h2>
-            <p>Let's connect and discuss opportunities</p>
-        </div>
-
-        <div class="contact-container">
-            <!-- Contact Form -->
-            <div class="contact-form-wrapper">
-                <h3><i class="fas fa-paper-plane"></i> Send Me a Message</h3>
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="name"><i class="fas fa-user"></i> Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject"><i class="fas fa-tag"></i> Subject</label>
-                        <input type="text" id="subject" name="subject" required placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <label for="message"><i class="fas fa-comment"></i> Message</label>
-                        <textarea id="message" name="message" rows="5" required
-                            placeholder="Your message here..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                    <div id="formStatus" class="form-status"></div>
-                </form>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="contact-info-wrapper">
-                <h3><i class="fas fa-address-card"></i> Contact Information</h3>
-                <div class="contact-info-cards">
-                    <div class="contact-info-card">
-                        <i class="fas fa-envelope"></i>
-                        <h4>Email</h4>
-                        <a href="mailto:tuankhalidah@gmail.com">tuankhalidah@gmail.com</a>
-                    </div>
-                    <div class="contact-info-card">
-                        <i class="fab fa-linkedin"></i>
-                        <h4>LinkedIn</h4>
-                        <a href="https://www.linkedin.com/in/tuan-khalidah-syazwana/"
-                            target="_blank">tuan-khalidah-syazwana</a>
-                    </div>
-                    <div class="contact-info-card">
-                        <i class="fab fa-github"></i>
-                        <h4>GitHub</h4>
-                        <a href="https://github.com/wanai220118" target="_blank">wanai220118</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Tuan Khalidah Syazwana. All rights reserved.</p>
@@ -536,3 +188,449 @@
 </body>
 
 </html>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="section fade-in">
+    <div class="section-header">
+        <h2>Experience & Education</h2>
+        <p>My professional journey and academic background</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="work">
+            <i class="fas fa-briefcase"></i> Work Experience
+        </button>
+        <button class="tab-btn" data-tab="education">
+            <i class="fas fa-graduation-cap"></i> Education
+        </button>
+        <button class="tab-btn" data-tab="certificates">
+            <i class="fas fa-certificate"></i> Certificates
+        </button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+        <!-- Work Experience Tab -->
+        <div class="tab-pane active" id="work">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <img src="assets/images/dummy.png" alt="MAIDAM" class="experience-logo">
+                            <div class="experience-info">
+                                <h3>System Developer Intern</h3>
+                                <span class="company"><i class="fas fa-building"></i> MAIDAM</span>
+                                <div class="timeline-date">
+                                    <i class="far fa-calendar"></i> April 2025 - January 2026
+                                </div>
+                            </div>
+                        </div>
+                        <p>Gaining hands-on experience in system development, working on real-world projects and
+                            collaborating with professional development teams.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Tab -->
+        <div class="tab-pane" id="education">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <img src="assets/images/dummy.png" alt="UTHM" class="experience-logo">
+                            <div class="experience-info">
+                                <h3>Bachelor of Computer Science (Software Engineering) with Honours</h3>
+                                <span class="company"><i class="fas fa-university"></i> Tun Hussein Onn University of
+                                    Malaysia, Johor</span>
+                                <div class="timeline-date">
+                                    <i class="far fa-calendar"></i> October 2022 - Current
+                                </div>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-star"></i> Current CGPA: 3.42
+                        </div>
+                        <p>Comprehensive study in software engineering principles, algorithms, data structures, and
+                            modern development practices.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <img src="assets/images/dummy.png" alt="Matriculation" class="experience-logo">
+                            <div class="experience-info">
+                                <h3>Pre-University Studies</h3>
+                                <span class="company"><i class="fas fa-school"></i> Pahang Matriculation College,
+                                    Pahang</span>
+                                <div class="timeline-date">
+                                    <i class="far fa-calendar"></i> October 2021 - July 2022
+                                </div>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-star"></i> Science Stream (Physical Science) - GPA: 3.63
+                        </div>
+                        <p>Focused on physical sciences preparing for tertiary education in computer science and
+                            engineering.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <img src="assets/images/dummy.png" alt="SMK Agama" class="experience-logo">
+                            <div class="experience-info">
+                                <h3>Malaysian Certificate of Education (SPM)</h3>
+                                <span class="company"><i class="fas fa-school"></i> SMK Agama Dato' Haji Abbas,
+                                    Terengganu</span>
+                                <div class="timeline-date">
+                                    <i class="far fa-calendar"></i> January 2019 - February 2021
+                                </div>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-trophy"></i> 7A 3B 1C
+                        </div>
+                        <p>Strong foundation in sciences and mathematics with excellent academic performance.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <img src="assets/images/dummy.png" alt="PT3" class="experience-logo">
+                            <div class="experience-info">
+                                <h3>Pentaksiran Tingkatan Tiga (PT3)</h3>
+                                <span class="company"><i class="fas fa-school"></i> SMK Agama Dato' Haji Abbas,
+                                    Terengganu</span>
+                                <div class="timeline-date">
+                                    <i class="far fa-calendar"></i> January 2016 - December 2018
+                                </div>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-trophy"></i> 10A 1C
+                        </div>
+                        <p>Demonstrated exceptional academic performance in lower secondary education.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <img src="assets/images/dummy.png" alt="UPSR" class="experience-logo">
+                            <div class="experience-info">
+                                <h3>Ujian Pencapaian Sekolah Rendah (UPSR)</h3>
+                                <span class="company"><i class="fas fa-school"></i> SK Kampong Tengah, Terengganu</span>
+                                <div class="timeline-date">
+                                    <i class="far fa-calendar"></i> January 2010 - December 2015
+                                </div>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-trophy"></i> 5A
+                        </div>
+                        <p>Achieved excellent results in primary school education, establishing a strong academic
+                            foundation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certificates Tab -->
+        <div class="tab-pane" id="certificates">
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Data Mining and Decision Making: Predictive Analytics for Business Strategies</h4>
+                    <span class="cert-date">May 2025</span>
+                    <button class="btn-view-cert" onclick="viewCertificate('cert1')">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </button>
+                </div>
+                <div class="certificate-card">
+                    <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
+                    <i class="fas fa-code-branch"></i>
+                    <h4>Data Structures & Algorithms in Python: Sorting Algorithms</h4>
+                    <span class="cert-date">May 2025</span>
+                    <button class="btn-view-cert" onclick="viewCertificate('cert2')">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </button>
+                </div>
+                <div class="certificate-card">
+                    <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
+                    <i class="fas fa-chart-bar"></i>
+                    <h4>Power BI Data Modelling Basics Tutorial Course</h4>
+                    <span class="cert-date">December 2024</span>
+                    <button class="btn-view-cert" onclick="viewCertificate('cert3')">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </button>
+                </div>
+                <div class="certificate-card">
+                    <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
+                    <i class="fas fa-analytics"></i>
+                    <h4>Power BI for Beginners</h4>
+                    <span class="cert-date">November 2024</span>
+                    <button class="btn-view-cert" onclick="viewCertificate('cert4')">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </button>
+                </div>
+                <div class="certificate-card">
+                    <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
+                    <i class="fas fa-database"></i>
+                    <h4>SAS Visual Analytics 1 for SAS Viya: Basics</h4>
+                    <span class="cert-date">November 2024</span>
+                    <button class="btn-view-cert" onclick="viewCertificate('cert5')">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </button>
+                </div>
+                <div class="certificate-card">
+                    <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
+                    <i class="fas fa-server"></i>
+                    <h4>SAS Viya Overview</h4>
+                    <span class="cert-date">November 2024</span>
+                    <button class="btn-view-cert" onclick="viewCertificate('cert6')">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </button>
+                </div>
+                <div class="certificate-card">
+                    <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
+                    <i class="fas fa-network-wired"></i>
+                    <h4>CCNA: Introduction to Networks</h4>
+                    <span class="cert-date">August 2024</span>
+                    <button class="btn-view-cert" onclick="viewCertificate('cert7')">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </button>
+                </div>
+                <div class="certificate-card">
+                    <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
+                    <i class="fas fa-landmark"></i>
+                    <h4>Seminar Pemuliharaan Senibina Warisan</h4>
+                    <span class="cert-date">August 2024</span>
+                    <button class="btn-view-cert" onclick="viewCertificate('cert8')">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </button>
+                </div>
+                <div class="certificate-card">
+                    <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>RHB X-CEL Star Mentoring Programme (Cohort 3)</h4>
+                    <span class="cert-date">December 2023</span>
+                    <button class="btn-view-cert" onclick="viewCertificate('cert9')">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </button>
+                </div>
+                <div class="certificate-card">
+                    <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
+                    <i class="fas fa-comments"></i>
+                    <h4>RHB X-Cel Star English Communications & Confidence Training</h4>
+                    <span class="cert-date">August 2022</span>
+                    <button class="btn-view-cert" onclick="viewCertificate('cert10')">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section with Tech Stack Icons -->
+<section id="skills" class="section fade-in">
+    <div class="section-header">
+        <h2>Technical Skills</h2>
+        <p>A comprehensive toolkit for building modern applications</p>
+    </div>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <i class="fas fa-code"></i>
+            <h3>Languages</h3>
+            <div class="tech-icons">
+                <i class="devicon-python-plain colored" title="Python"></i>
+                <i class="devicon-java-plain colored" title="Java"></i>
+                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                <i class="devicon-cplusplus-plain colored" title="C++"></i>
+                <i class="devicon-php-plain colored" title="PHP"></i>
+                <i class="devicon-html5-plain colored" title="HTML5"></i>
+                <i class="devicon-css3-plain colored" title="CSS3"></i>
+                <i class="devicon-r-plain colored" title="R"></i>
+            </div>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-layer-group"></i>
+            <h3>Frameworks</h3>
+            <div class="tech-icons">
+                <i class="devicon-laravel-plain colored" title="Laravel"></i>
+                <i class="devicon-bootstrap-plain colored" title="Bootstrap"></i>
+                <i class="devicon-pandas-original colored" title="Pandas"></i>
+            </div>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-tools"></i>
+            <h3>Tools & Technologies</h3>
+            <div class="tech-icons">
+                <i class="devicon-git-plain colored" title="Git"></i>
+                <i class="devicon-github-original" title="GitHub"></i>
+                <i class="devicon-firebase-plain colored" title="Firebase"></i>
+                <i class="devicon-mysql-plain colored" title="MySQL"></i>
+                <i class="devicon-linux-plain" title="Linux"></i>
+            </div>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>IDEs & Platforms</h3>
+            <div class="tech-icons">
+                <i class="devicon-vscode-plain colored" title="VS Code"></i>
+                <i class="devicon-intellij-plain colored" title="IntelliJ IDEA"></i>
+                <i class="devicon-androidstudio-plain colored" title="Android Studio"></i>
+                <i class="devicon-rstudio-plain colored" title="RStudio"></i>
+            </div>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-users"></i>
+            <h3>Soft Skills</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">Communication</span>
+                <span class="skill-tag">Teamwork</span>
+                <span class="skill-tag">Problem-Solving</span>
+                <span class="skill-tag">Leadership</span>
+                <span class="skill-tag">Adaptability</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section with Filters -->
+<section id="projects" class="section fade-in">
+    <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>A showcase of my recent work and achievements</p>
+    </div>
+
+    <!-- Project Filters -->
+    <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-th"></i> All Projects
+        </button>
+        <button class="filter-btn" data-filter="web">
+            <i class="fas fa-globe"></i> Web
+        </button>
+        <button class="filter-btn" data-filter="mobile">
+            <i class="fas fa-mobile-alt"></i> Mobile
+        </button>
+        <button class="filter-btn" data-filter="ai">
+            <i class="fas fa-brain"></i> AI/ML
+        </button>
+        <button class="filter-btn" data-filter="data">
+            <i class="fas fa-chart-bar"></i> Data Analytics
+        </button>
+        <button class="filter-btn" data-filter="network">
+            <i class="fas fa-network-wired"></i> Network
+        </button>
+        <button class="filter-btn" data-filter="design">
+            <i class="fas fa-pen-nib"></i> Design
+        </button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+        <!-- Projects will be dynamically loaded here -->
+    </div>
+</section>
+
+<!-- Project Modal -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-body">
+            <h2 id="modalTitle"></h2>
+            <div class="modal-meta">
+                <span id="modalDate"></span>
+                <span id="modalType"></span>
+            </div>
+            <div class="modal-screenshots" id="modalScreenshots"></div>
+            <p id="modalDescription"></p>
+            <div class="modal-tech" id="modalTech"></div>
+            <div class="modal-links">
+                <a href="#" id="modalGithub" target="_blank" class="modal-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate Modal -->
+<div id="certificateModal" class="modal">
+    <div class="modal-content cert-modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="cert-modal-body">
+            <img id="certFullImage" src="" alt="Certificate">
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact" class="section fade-in">
+    <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Let's connect and discuss opportunities</p>
+    </div>
+
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+            <h3><i class="fas fa-paper-plane"></i> Send Me a Message</h3>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Message</label>
+                    <textarea id="message" name="message" rows="5" required
+                        placeholder="Your message here..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-wrapper">
+            <h3><i class="fas fa-address-card"></i> Contact Information</h3>
+            <div class="contact-info-cards">
+                <div class="contact-info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <a href="mailto:tuankhalidah@gmail.com">tuankhalidah@gmail.com</a>
+                </div>
+                <div class="contact-info-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h4>LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/tuan-khalidah-syazwana/"
+                        target="_blank">tuan-khalidah-syazwana</a>
+                </div>
+                <div class="contact-info-card">
+                    <i class="fab fa-github"></i>
+                    <h4>GitHub</h4>
+                    <a href="https://github.com/wanai220118" target="_blank">wanai220118</a>
+                </div>
+            </div>
+        </div>
+    </div>

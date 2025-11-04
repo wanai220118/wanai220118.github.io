@@ -1,5 +1,5 @@
 // ========== EMAILJS CONFIGURATION ==========
-emailjs.init("YOUR_USER_ID");
+emailjs.init("mMer3rnqTxT5ZF7v-"); // Replace with your EmailJS User ID
 
 // ========== PROJECTS DATA ==========
 const projects = [
@@ -8,6 +8,7 @@ const projects = [
     title: "Syarie Lawyer System",
     date: "August 2025 - Current",
     type: "Web Application",
+    category: "web",
     icon: "fa-gavel",
     description:
       "Developing a comprehensive Syariah law management system to assist lawyers with case management, documentation, and client consultation tracking.",
@@ -24,9 +25,10 @@ const projects = [
     title: "GlowGuide Mobile Application",
     date: "October 2024 - Current",
     type: "Mobile & Web Application",
+    category: "mobile",
     icon: "fa-mobile-alt",
     description:
-      "Developed a mobile application integrating both e-commerce features and online consultation booking for treatment services. Built a web-based admin panel using the Laravel framework for managing users, products, and bookings. Currently developing the mobile app using Java in Android Studio, focusing on a user-friendly interface and real-time data sync.",
+      "Developed a mobile application integrating both e-commerce features and online consultation booking for treatment services. Built a web-based admin panel using the Laravel framework for managing users, products, and bookings.",
     tech: ["Java", "Android Studio", "Laravel", "Firebase", "MySQL"],
     github: "https://github.com/yourusername/glowguide",
     screenshots: [
@@ -41,6 +43,7 @@ const projects = [
     title: "Rice Leaf Disease Detection Using CNN",
     date: "June 2025",
     type: "Machine Learning | Group Project",
+    category: "ai",
     icon: "fa-brain",
     description:
       "Implemented deep convolutional neural network (CNN) models to classify and detect rice leaf diseases from image data. Applied image preprocessing, training, and evaluation to develop an automated disease detection system with high accuracy.",
@@ -57,9 +60,10 @@ const projects = [
     title: "Diabetes Prediction System",
     date: "May 2025",
     type: "Machine Learning | Group Project",
+    category: "ai",
     icon: "fa-heartbeat",
     description:
-      "Built a predictive model using classification algorithms like Random Forest, Logistic Regression, and K-Nearest Neighbors (KNN) on a diabetes dataset. Applied data preprocessing, feature selection, and model evaluation techniques to improve prediction accuracy.",
+      "Built a predictive model using classification algorithms like Random Forest, Logistic Regression, and K-Nearest Neighbors (KNN) on a diabetes dataset.",
     tech: ["Python", "Scikit-learn", "Pandas", "Machine Learning"],
     github: "https://github.com/yourusername/diabetes-prediction",
     screenshots: [
@@ -73,9 +77,10 @@ const projects = [
     title: "Shortest Path Algorithm Analysis",
     date: "April 2025",
     type: "Algorithm Analysis | Group Project",
+    category: "data",
     icon: "fa-route",
     description:
-      "Analyzed and compared various shortest path algorithms such as Dijkstra's, Breadth First Search and Depth First Search for performance and efficiency. Evaluated algorithmic complexity and accuracy across different graph structures and datasets.",
+      "Analyzed and compared various shortest path algorithms such as Dijkstra's, Breadth First Search and Depth First Search for performance and efficiency.",
     tech: ["Python", "Algorithms", "Data Structures", "Graph Theory"],
     github: "https://github.com/yourusername/shortest-path-analysis",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
@@ -85,9 +90,10 @@ const projects = [
     title: "Air Quality Analysis in India",
     date: "2024",
     type: "Data Analytics | Group Project",
+    category: "data",
     icon: "fa-wind",
     description:
-      "Used Power BI and DAX formulas to analyze and visualize air quality data. Applied various analytics methods (descriptive to prescriptive) to assess health implications.",
+      "Used Power BI and DAX formulas to analyze and visualize air quality data. Applied various analytics methods to assess health implications.",
     tech: ["Power BI", "DAX", "Data Analytics", "Visualization"],
     github: "https://github.com/yourusername/air-quality-india",
     screenshots: [
@@ -101,9 +107,10 @@ const projects = [
     title: "E-KOOP Inventory System",
     date: "July 2024 - January 2025",
     type: "Web Application | Group Project",
+    category: "web",
     icon: "fa-warehouse",
     description:
-      "Developed a web-based system to track and manage inventory, including product details, stock levels, and reorder points, for efficient inventory control. Utilized a relational database to store and manage data, ensuring accurate records and seamless updates for products, suppliers, and transactions.",
+      "Developed a web-based system to track and manage inventory, including product details, stock levels, and reorder points.",
     tech: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
     github: "https://github.com/yourusername/ekoop-inventory",
     screenshots: [
@@ -117,9 +124,10 @@ const projects = [
     title: "SOHO & Campus Network Design",
     date: "June 2024",
     type: "Network Design | Group Project",
+    category: "network",
     icon: "fa-network-wired",
     description:
-      "Designed a secure and efficient network for small offices or home offices, including a guest network for visitors to ensure security and privacy for internal resources. Developed a comprehensive campus-wide network for a college, focusing on scalability, security, and connectivity to support academic, administrative, and guest services across the campus.",
+      "Designed a secure and efficient network for small offices and developed a comprehensive campus-wide network for a college.",
     tech: ["Cisco Packet Tracer", "Network Design", "VLAN", "Security"],
     github: "https://github.com/yourusername/network-design",
     screenshots: [
@@ -133,9 +141,10 @@ const projects = [
     title: "Tic-Tac-Toe Game App",
     date: "2024",
     type: "Desktop Application | Group Project",
+    category: "web",
     icon: "fa-gamepad",
     description:
-      "Built an interactive Tic Tac Toe game using Java in Visual Studio Code. Implemented game logic and GUI components for a functional user experience.",
+      "Built an interactive Tic Tac Toe game using Java. Implemented game logic and GUI components.",
     tech: ["Java", "Swing", "GUI", "Game Development"],
     github: "https://github.com/yourusername/tic-tac-toe",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
@@ -145,9 +154,10 @@ const projects = [
     title: "Server-Client Messaging in VM",
     date: "January 2024",
     type: "Systems Programming | Group Project",
+    category: "network",
     icon: "fa-server",
     description:
-      "Executed server-client messaging and backup operations in a virtual environment using Kali Linux and Ubuntu. Demonstrated basic scripting and communication protocols within virtual machines.",
+      "Executed server-client messaging and backup operations in a virtual environment using Kali Linux and Ubuntu.",
     tech: ["Linux", "Shell Scripting", "Networking", "Virtual Machines"],
     github: "https://github.com/yourusername/server-client-vm",
     screenshots: [
@@ -161,9 +171,10 @@ const projects = [
     title: "Laundry Management System",
     date: "January 2024",
     type: "UI/UX Design | Group Project",
+    category: "design",
     icon: "fa-tshirt",
     description:
-      "Designed a prototype interface for a laundry service system using Canva. Focused on user requirements gathering and system visualization.",
+      "Designed a prototype interface for a laundry service system using Canva.",
     tech: ["Canva", "UI/UX", "Prototyping", "Design"],
     github: "https://github.com/yourusername/laundry-system",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
@@ -173,9 +184,10 @@ const projects = [
     title: "EzBook Application",
     date: "January 2024",
     type: "UI/UX Design | Group Project",
+    category: "design",
     icon: "fa-calendar-check",
     description:
-      "Created a user-centered prototype for a booking application using Figma. Applied HCI principles to enhance interface usability and design.",
+      "Created a user-centered prototype for a booking application using Figma.",
     tech: ["Figma", "UI/UX", "HCI", "Prototyping"],
     github: "https://github.com/yourusername/ezbook",
     screenshots: [
@@ -189,9 +201,10 @@ const projects = [
     title: "Employee Payroll System",
     date: "January 2024",
     type: "Desktop Application | Group Project",
+    category: "web",
     icon: "fa-money-check-alt",
     description:
-      "Developed a system to calculate and manage employee salaries, including deductions, bonuses, and tax calculations. Utilized OOP principles like classes, inheritance, and polymorphism to create a modular, scalable, and maintainable payroll system for handling employee data and payroll functions.",
+      "Developed a system to calculate and manage employee salaries using OOP principles.",
     tech: ["Java", "OOP", "Database", "Swing"],
     github: "https://github.com/yourusername/payroll-system",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
@@ -201,9 +214,10 @@ const projects = [
     title: "H2OTrack – Smart Bottle Ring",
     date: "2024",
     type: "Product Design | Group Project",
+    category: "design",
     icon: "fa-tint",
     description:
-      "Designed an innovative smart bottle accessory prototype using Figma. Focused on sustainable hydration tracking through a resizable tech ring.",
+      "Designed an innovative smart bottle accessory prototype using Figma.",
     tech: ["Figma", "Product Design", "IoT Concept", "UI/UX"],
     github: "https://github.com/yourusername/h2otrack",
     screenshots: [
@@ -217,9 +231,10 @@ const projects = [
     title: "Map Coloring using DFS",
     date: "December 2023",
     type: "Algorithm Implementation | Group Project",
+    category: "data",
     icon: "fa-map",
     description:
-      "Utilized Depth First Search (DFS) to traverse and color the regions of a map (represented as a graph) such that no two adjacent regions share the same color. Demonstrated concepts from graph theory, particularly node adjacency and traversal algorithms, to solve the classic map coloring problem effectively.",
+      "Utilized Depth First Search (DFS) to solve the classic map coloring problem.",
     tech: ["Python", "Algorithms", "Graph Theory", "DFS"],
     github: "https://github.com/yourusername/map-coloring-dfs",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
@@ -229,9 +244,10 @@ const projects = [
     title: "Network Setup in Virtual Machine",
     date: "October 2023",
     type: "System Configuration | Group Project",
-    icon: "fa-network-wired",
+    category: "network",
+    icon: "fa-desktop",
     description:
-      "Configured a virtual network environment using Oracle VirtualBox and Ubuntu OS. Applied key concepts of OS structure and demonstrated essential skills in virtual machine operations.",
+      "Configured a virtual network environment using Oracle VirtualBox and Ubuntu OS.",
     tech: ["VirtualBox", "Ubuntu", "Networking", "System Admin"],
     github: "https://github.com/yourusername/vm-network-setup",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
@@ -241,9 +257,10 @@ const projects = [
     title: "Bridal Management System",
     date: "June 2023",
     type: "Software Engineering | Group Project",
+    category: "web",
     icon: "fa-ring",
     description:
-      "Presented a structured approach to bridal service management system development without implementation. Gained experience in applying theoretical software engineering principles to real-world project planning and documentation.",
+      "Presented a structured approach to bridal service management system development.",
     tech: ["Software Engineering", "Documentation", "Planning", "UML"],
     github: "https://github.com/yourusername/bridal-management",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
@@ -253,9 +270,10 @@ const projects = [
     title: "Online Teaching Effectiveness Study",
     date: "June 2023",
     type: "Data Analysis | Group Project",
+    category: "data",
     icon: "fa-chart-bar",
     description:
-      "Collected primary data via questionnaires to evaluate online teaching efficiency. Analyzed the data using SPSS software to draw meaningful conclusions.",
+      "Collected and analyzed data using SPSS to evaluate online teaching efficiency.",
     tech: ["SPSS", "Data Analysis", "Statistics", "Research"],
     github: "https://github.com/yourusername/online-teaching-study",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
@@ -265,9 +283,10 @@ const projects = [
     title: "Algebra: Real Life Applications",
     date: "January 2023",
     type: "Mathematical Programming | Group Project",
+    category: "data",
     icon: "fa-calculator",
     description:
-      "Explored real-world applications of algebraic methods. Implemented solutions using C programming to demonstrate mathematical models in practical scenarios. Strengthened analytical thinking by connecting mathematical concepts to real-life economic and business problems.",
+      "Explored real-world applications of algebraic methods using C programming.",
     tech: ["C", "Mathematics", "Algorithms", "Problem Solving"],
     github: "https://github.com/yourusername/algebra-applications",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
@@ -277,9 +296,10 @@ const projects = [
     title: "Car Parking Services",
     date: "January 2023",
     type: "Desktop Application | Group Project",
+    category: "web",
     icon: "fa-parking",
     description:
-      "Developed a C program using DEV C++ to calculate parking hours and corresponding charges. Designed and tested the application to ensure accurate output based on user input.",
+      "Developed a C program to calculate parking hours and corresponding charges.",
     tech: ["C", "DEV C++", "Console Application", "Logic"],
     github: "https://github.com/yourusername/parking-services",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
@@ -287,11 +307,16 @@ const projects = [
 ];
 
 // ========== RENDER PROJECTS ==========
-function renderProjects() {
+let currentFilter = "all";
+
+function renderProjects(filter = "all") {
   const projectsGrid = document.getElementById("projectsGrid");
   projectsGrid.innerHTML = "";
 
-  projects.forEach((project) => {
+  const filteredProjects =
+    filter === "all" ? projects : projects.filter((p) => p.category === filter);
+
+  filteredProjects.forEach((project) => {
     const projectCard = document.createElement("div");
     projectCard.className = "project-card";
     projectCard.onclick = () => openProjectModal(project.id);
@@ -321,6 +346,19 @@ function renderProjects() {
   });
 }
 
+// ========== PROJECT FILTERS ==========
+const filterBtns = document.querySelectorAll(".filter-btn");
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.getAttribute("data-filter");
+    currentFilter = filter;
+    renderProjects(filter);
+  });
+});
+
 // ========== PROJECT MODAL ==========
 function openProjectModal(projectId) {
   const project = projects.find((p) => p.id === projectId);
@@ -336,7 +374,6 @@ function openProjectModal(projectId) {
   document.getElementById("modalDescription").textContent = project.description;
   document.getElementById("modalGithub").href = project.github;
 
-  // Screenshots
   const screenshotsDiv = document.getElementById("modalScreenshots");
   screenshotsDiv.innerHTML = "";
   project.screenshots.forEach((screenshot) => {
@@ -346,7 +383,6 @@ function openProjectModal(projectId) {
     screenshotsDiv.appendChild(img);
   });
 
-  // Technologies
   const techDiv = document.getElementById("modalTech");
   techDiv.innerHTML = "";
   project.tech.forEach((tech) => {
@@ -361,7 +397,6 @@ function openProjectModal(projectId) {
 
 // ========== CERTIFICATE MODAL ==========
 function viewCertificate(certId) {
-  // In real implementation, you would have different images for each certificate
   const certImage = "assets/images/dummy.png";
   document.getElementById("certFullImage").src = certImage;
   document.getElementById("certificateModal").style.display = "block";
@@ -511,17 +546,40 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// ========== TYPING ANIMATION ==========
+// ========== MULTI-TEXT TYPING ANIMATION ==========
 const tagline = document.querySelector(".tagline");
 if (tagline) {
-  const text = "System Developer";
-  let i = 0;
+  const texts = ["System Developer", "Mobile App Builder", "Data Enthusiast"];
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let isPaused = false;
 
   function typeWriter() {
-    if (i < text.length) {
-      tagline.textContent += text.charAt(i);
-      i++;
+    const currentText = texts[textIndex];
+
+    if (isPaused) {
+      setTimeout(typeWriter, 2000);
+      isPaused = false;
+      return;
+    }
+
+    if (!isDeleting && charIndex < currentText.length) {
+      tagline.textContent += currentText.charAt(charIndex);
+      charIndex++;
       setTimeout(typeWriter, 100);
+    } else if (isDeleting && charIndex > 0) {
+      tagline.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(typeWriter, 50);
+    } else if (!isDeleting && charIndex === currentText.length) {
+      isPaused = true;
+      isDeleting = true;
+      setTimeout(typeWriter, 2000);
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+      setTimeout(typeWriter, 500);
     }
   }
 
@@ -551,7 +609,13 @@ const animateCounter = (element, start, end, duration) => {
     if (!startTimestamp) startTimestamp = timestamp;
     const progress = Math.min((timestamp - startTimestamp) / duration, 1);
     const value = Math.floor(progress * (end - start) + start);
-    element.textContent = value + (end > 5 ? "+" : "");
+
+    if (end > 5) {
+      element.textContent = value + "+";
+    } else {
+      element.textContent = value.toFixed(2);
+    }
+
     if (progress < 1) {
       window.requestAnimationFrame(step);
     }
@@ -579,7 +643,7 @@ statCards.forEach((card) => {
   statObserver.observe(card);
 });
 
-// ========== CONTACT FORM ==========
+// ========== CONTACT FORM WITH EMAILJS ==========
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
 
@@ -599,8 +663,9 @@ contactForm.addEventListener("submit", function (e) {
     to_name: "Tuan Khalidah Syazwana",
   };
 
+  // Replace with your EmailJS Service ID and Template ID
   emailjs
-    .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+    .send("mMer3rnqTxT5ZF7v-", "template_n4x5b1n", templateParams)
     .then(
       function (response) {
         formStatus.textContent =
@@ -626,6 +691,28 @@ contactForm.addEventListener("submit", function (e) {
     });
 });
 
+// ========== PARTICLES BACKGROUND ==========
+function createParticles() {
+  const particlesContainer = document.getElementById("particles");
+  const particleCount = 50;
+
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement("div");
+    particle.style.position = "absolute";
+    particle.style.width = Math.random() * 3 + 1 + "px";
+    particle.style.height = particle.style.width;
+    particle.style.background = "var(--primary)";
+    particle.style.borderRadius = "50%";
+    particle.style.opacity = Math.random() * 0.3;
+    particle.style.left = Math.random() * 100 + "%";
+    particle.style.top = Math.random() * 100 + "%";
+    particle.style.animation = `floatParticle ${
+      Math.random() * 10 + 10
+    }s linear infinite`;
+    particlesContainer.appendChild(particle);
+  }
+}
+
 // ========== CLOSE MENU ON OUTSIDE CLICK ==========
 document.addEventListener("click", (e) => {
   if (navLinks.classList.contains("active")) {
@@ -637,7 +724,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// ========== ESC KEY ==========
+// ========== ESC KEY HANDLER ==========
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     if (navLinks.classList.contains("active")) {
@@ -654,9 +741,11 @@ document.addEventListener("keydown", (e) => {
 
 // ========== INITIALIZE ==========
 document.addEventListener("DOMContentLoaded", () => {
-  renderProjects();
+  renderProjects("all");
+  createParticles();
 });
 
+// ========== CONSOLE SIGNATURE ==========
 console.log(
   "%c👋 Hello there!",
   "font-size: 20px; font-weight: bold; color: #6366f1;"
@@ -664,4 +753,8 @@ console.log(
 console.log(
   "%cThanks for checking out my portfolio!",
   "font-size: 14px; color: #ec4899;"
+);
+console.log(
+  "%cFeel free to reach out if you'd like to collaborate!",
+  "font-size: 12px; color: #64748b;"
 );
