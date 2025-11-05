@@ -1,5 +1,5 @@
 // ========== EMAILJS CONFIGURATION ==========
-emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+emailjs.init("mMer3rnqTxT5ZF7v-"); // Replace with your EmailJS User ID
 
 // ========== PROJECTS DATA ==========
 const projects = [
@@ -665,26 +665,19 @@ contactForm.addEventListener("submit", function (e) {
 
   // Replace with your EmailJS Service ID and Template ID
   emailjs
-    .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
-    .then(
-      function (response) {
-        formStatus.textContent =
-          "✓ Message sent successfully! I will get back to you soon.";
-        formStatus.className = "form-status success";
-        contactForm.reset();
-        setTimeout(() => {
-          formStatus.style.display = "none";
-        }, 5000);
-      },
-      function (error) {
-        formStatus.textContent =
-          "✗ Failed to send message. Please try again or email me directly.";
-        formStatus.className = "form-status error";
-        setTimeout(() => {
-          formStatus.style.display = "none";
-        }, 5000);
-      }
-    )
+    .send("service_aywpcaf", "template_n4x5b1n", templateParams)
+    .then(function (response) {
+      formStatus.textContent = "✓ Message sent successfully!";
+      formStatus.className = "form-status success";
+      contactForm.reset();
+      setTimeout(() => (formStatus.style.display = "none"), 5000);
+    })
+    .catch(function (error) {
+      formStatus.textContent = "✗ Failed to send message. Please try again.";
+      formStatus.className = "form-status error";
+      console.error("EmailJS Error:", error);
+      setTimeout(() => (formStatus.style.display = "none"), 5000);
+    })
     .finally(() => {
       submitBtn.innerHTML = originalBtnText;
       submitBtn.disabled = false;
