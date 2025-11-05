@@ -13,11 +13,14 @@ const projects = [
     description:
       "Developing a comprehensive Syariah law management system to assist lawyers with case management, documentation, and client consultation tracking.",
     tech: ["PHP", "Laravel", "MySQL", "Bootstrap"],
-    github: "https://github.com/yourusername/syarie-lawyer",
+    github: "https://github.com/wanai220118/Sistem-Pengurusan-Peguam-Syarie",
     screenshots: [
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
+      "assets/images/sls-1.png",
+      "assets/images/sls-2.png",
+      "assets/images/sls-3.png",
+      "assets/images/sls-4.png",
+      "assets/images/sls-5.png",
+      "assets/images/sls-6.jpg",
     ],
   },
   {
@@ -30,12 +33,14 @@ const projects = [
     description:
       "Developed a mobile application integrating both e-commerce features and online consultation booking for treatment services. Built a web-based admin panel using the Laravel framework for managing users, products, and bookings.",
     tech: ["Java", "Android Studio", "Laravel", "Firebase", "MySQL"],
-    github: "https://github.com/yourusername/glowguide",
+    github: "https://github.com/wanai220118/GlowGuide_MobileApp",
     screenshots: [
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
+      "assets/images/gg-1.png",
+      "assets/images/gg-2.png",
+      "assets/images/gg-3.png",
+      "assets/images/gg-4.png",
+      "assets/images/gg-5.png",
+      "assets/images/gg-6.png",
     ],
   },
   {
@@ -48,12 +53,9 @@ const projects = [
     description:
       "Implemented deep convolutional neural network (CNN) models to classify and detect rice leaf diseases from image data. Applied image preprocessing, training, and evaluation to develop an automated disease detection system with high accuracy.",
     tech: ["Python", "TensorFlow", "CNN", "Image Processing"],
-    github: "https://github.com/yourusername/rice-disease-detection",
-    screenshots: [
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-    ],
+    github:
+      "https://github.com/wanai220118/Image-Based-Detection-of-Rice-Leaf-Diseases-Using-Deep-CNN-Models",
+    screenshots: ["assets/images/rice.png"],
   },
   {
     id: 4,
@@ -65,7 +67,8 @@ const projects = [
     description:
       "Built a predictive model using classification algorithms like Random Forest, Logistic Regression, and K-Nearest Neighbors (KNN) on a diabetes dataset.",
     tech: ["Python", "Scikit-learn", "Pandas", "Machine Learning"],
-    github: "https://github.com/yourusername/diabetes-prediction",
+    github:
+      "https://github.com/wanai220118/Predicting-Diabetes-with-Classification-Algorithm",
     screenshots: [
       "assets/images/dummy.png",
       "assets/images/dummy.png",
@@ -146,8 +149,8 @@ const projects = [
     description:
       "Built an interactive Tic Tac Toe game using Java. Implemented game logic and GUI components.",
     tech: ["Java", "Swing", "GUI", "Game Development"],
-    github: "https://github.com/yourusername/tic-tac-toe",
-    screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
+    github: "https://github.com/wanai220118/Tic-Tac-Toe_Game_Application",
+    screenshots: ["assets/images/ttt.png"],
   },
   {
     id: 10,
@@ -206,7 +209,7 @@ const projects = [
     description:
       "Developed a system to calculate and manage employee salaries using OOP principles.",
     tech: ["Java", "OOP", "Database", "Swing"],
-    github: "https://github.com/yourusername/payroll-system",
+    github: "https://github.com/wanai220118/Employee-Payroll-System",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
   },
   {
@@ -236,7 +239,8 @@ const projects = [
     description:
       "Utilized Depth First Search (DFS) to solve the classic map coloring problem.",
     tech: ["Python", "Algorithms", "Graph Theory", "DFS"],
-    github: "https://github.com/yourusername/map-coloring-dfs",
+    github:
+      "https://github.com/wanai220118/Evaluating-Shortest-Path-Solutions-A-Performance-Comparison-of-Dijkstra-BFS-and-DFS-Algorithms",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
   },
   {
@@ -301,7 +305,7 @@ const projects = [
     description:
       "Developed a C program to calculate parking hours and corresponding charges.",
     tech: ["C", "DEV C++", "Console Application", "Logic"],
-    github: "https://github.com/yourusername/parking-services",
+    github: "https://github.com/wanai220118/Car-Parking-Services",
     screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
   },
 ];
@@ -397,7 +401,7 @@ function openProjectModal(projectId) {
 
 // ========== CERTIFICATE MODAL ==========
 function viewCertificate(certId) {
-  const certImage = "assets/images/dummy.png";
+  const certImage = "assets/images/seminarwarisan.jpg";
   document.getElementById("certFullImage").src = certImage;
   document.getElementById("certificateModal").style.display = "block";
   document.body.style.overflow = "hidden";
