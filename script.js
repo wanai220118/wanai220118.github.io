@@ -1,5 +1,5 @@
 // ========== EMAILJS CONFIGURATION ==========
-emailjs.init("mMer3rnqTxT5ZF7v-"); // Replace with your EmailJS User ID
+emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
 
 // ========== PROJECTS DATA ==========
 const projects = [
@@ -665,7 +665,7 @@ contactForm.addEventListener("submit", function (e) {
 
   // Replace with your EmailJS Service ID and Template ID
   emailjs
-    .send("mMer3rnqTxT5ZF7v-", "template_n4x5b1n", templateParams)
+    .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
     .then(
       function (response) {
         formStatus.textContent =
