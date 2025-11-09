@@ -26,7 +26,7 @@ const projects = [
   {
     id: 2,
     title: "GlowGuide Mobile Application",
-    date: "October 2024 - Current",
+    date: "October 2024 - June 2025",
     type: "Mobile & Web Application",
     category: "mobile",
     icon: "fa-mobile-alt",
