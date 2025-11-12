@@ -1,6 +1,20 @@
 // ========== EMAILJS CONFIGURATION ==========
 emailjs.init("mMer3rnqTxT5ZF7v-"); // Replace with your EmailJS User ID
 
+// ========== CERTIFICATE IMAGES ==========
+const certificateImages = [
+  "assets/images/data-mining.jpeg",
+  "assets/images/data-structure.png",
+  "assets/images/power-bi.jpg",
+  "assets/images/pbi-beginner.jpg",
+  "assets/images/sas-basic.png",
+  "assets/images/sas-overview.png",
+  "assets/images/cisco.png",
+  "assets/images/seminarwarisan.jpg",
+  "assets/images/dummy.png",
+  "assets/images/dummy.png",
+];
+
 // ========== PROJECTS DATA ==========
 const projects = [
   {
@@ -10,9 +24,12 @@ const projects = [
     type: "Web Application",
     category: "web",
     icon: "fa-gavel",
-    description:
-      "Developing a comprehensive Syariah law management system to assist lawyers with case management, documentation, and client consultation tracking.",
-    tech: ["PHP", "Laravel", "MySQL", "Bootstrap"],
+    description: `
+A web-based system built with PHP and MySQL to manage Syarie lawyer certifications. It supports three user roles — User (Lawyer), Admin, and Staff — each with specific access and responsibilities.
+
+Lawyers can apply for new certification, renewal, or appeal (rayuan), progressing through stages like payment, interview, and Majlis Tauliah approval. The platform streamlines the workflow for admins and staff to process applications efficiently.
+    `,
+    tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "XAMPP"],
     github: "https://github.com/wanai220118/Sistem-Pengurusan-Peguam-Syarie",
     screenshots: [
       "assets/images/sls-1.png",
@@ -23,6 +40,7 @@ const projects = [
       "assets/images/sls-6.jpg",
     ],
   },
+
   {
     id: 2,
     title: "GlowGuide Mobile Application",
@@ -401,7 +419,8 @@ function openProjectModal(projectId) {
 
 // ========== CERTIFICATE MODAL ==========
 function viewCertificate(certId) {
-  const certImage = "assets/images/seminarwarisan.jpg";
+  const index = parseInt(certId.replace("cert", "")) - 1;
+  const certImage = certificateImages[index];
   document.getElementById("certFullImage").src = certImage;
   document.getElementById("certificateModal").style.display = "block";
   document.body.style.overflow = "hidden";
@@ -669,7 +688,7 @@ contactForm.addEventListener("submit", function (e) {
 
   // Replace with your EmailJS Service ID and Template ID
   emailjs
-    .send("service_aywpcaf", "template_n4x5b1n", templateParams)
+    .send("service_kv1i1mi", "template_sqkolz9", templateParams)
     .then(function (response) {
       formStatus.textContent = "✓ Message sent successfully!";
       formStatus.className = "form-status success";
