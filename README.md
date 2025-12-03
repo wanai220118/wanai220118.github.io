@@ -1,9 +1,5 @@
 # Tuan Khalidah Syazwana | System Developer Portfolio
 
-### Short Description
-
-Personal portfolio website showcasing full-stack, mobile, AI/ML, networking, data analytics, and UI/UX projects.
-
 ### Description
 
 This portfolio is built to highlight professional experience, technical capabilities, and project showcases in multiple computing domains. It includes smooth navigation, interactive modals, stat counters, project filtering, certificate preview, and a working contact form with email delivery. The site is deployed using GitHub Pages hosting for global access.
