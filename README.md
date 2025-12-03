@@ -16,10 +16,7 @@ This portfolio is built to highlight professional experience, technical capabili
 - 📩 Contact form with email delivery
 - 📱 Fully responsive on phone and desktop
 - 🔍 SEO and Open Graph metadata support
-
-### Demo
-
-🔗 Live Website: https://wanai220118.github.io/
+  
 
 ### Technologies Used
 
