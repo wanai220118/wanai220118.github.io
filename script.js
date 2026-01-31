@@ -805,14 +805,17 @@ document.addEventListener("keydown", (e) => {
 });
 
 // ========== FOOTER COPYRIGHT YEAR ==========
-const copyrightEl = document.getElementById("copyrightYear");
-if (copyrightEl) {
-  const year = new Date().getFullYear();
-  copyrightEl.textContent = year > 2025 ? `2025 - ${year}` : "2025";
+function updateCopyrightYear() {
+  const copyrightEl = document.getElementById("copyrightYear");
+  if (copyrightEl) {
+    const year = new Date().getFullYear();
+    copyrightEl.textContent = year === 2025 ? "2025" : `2025 - ${year}`;
+  }
 }
 
 // ========== INITIALIZE ==========
 function initPortfolio() {
+  updateCopyrightYear();
   renderProjects("all");
   createParticles();
   const projectsSection = document.getElementById("projects");
