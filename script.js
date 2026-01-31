@@ -509,12 +509,16 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// ========== SCROLL ANIMATIONS ==========
+// ========== SCROLL ANIMATIONS (mobile-friendly IntersectionObserver) ==========
 const fadeElements = document.querySelectorAll(".fade-in");
 
+// Generous options so sections (especially Projects) reliably appear on scroll on mobile:
+// - threshold 0: trigger as soon as any pixel is visible
+// - rootMargin: expand bottom so we trigger earlier (e.g. 80px before element enters viewport)
 const observerOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px",
+  threshold: 0,
+  rootMargin: "0px 0px 80px 0px",
+  root: null,
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -525,20 +529,60 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-fadeElements.forEach((element) => {
-  observer.observe(element);
+function observeFadeElements() {
+  fadeElements.forEach((element) => {
+    observer.observe(element);
+  });
+}
+
+// Fallback: if a fade-in is already in view on load/resize (e.g. short viewport), make it visible.
+// Fixes Projects not appearing when observer fires before layout is stable on mobile.
+function revealVisibleFadeElements() {
+  const vh = window.innerHeight;
+  fadeElements.forEach((el) => {
+    if (el.classList.contains("visible")) return;
+    const rect = el.getBoundingClientRect();
+    const top = rect.top;
+    const bottom = rect.bottom;
+    if (top < vh * 0.9 && bottom > vh * 0.1) {
+      el.classList.add("visible");
+    }
+  });
+}
+
+observeFadeElements();
+// Run after layout (e.g. after projects grid is rendered) so #projects has correct height
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    requestAnimationFrame(() => {
+      revealVisibleFadeElements();
+      setTimeout(revealVisibleFadeElements, 100);
+    });
+  });
+} else {
+  requestAnimationFrame(() => {
+    revealVisibleFadeElements();
+    setTimeout(revealVisibleFadeElements, 100);
+  });
+}
+window.addEventListener("resize", () => {
+  requestAnimationFrame(revealVisibleFadeElements);
 });
 
 // ========== SCROLL TO TOP ==========
 const scrollTopBtn = document.getElementById("scrollTop");
 
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 300) {
-    scrollTopBtn.classList.add("visible");
-  } else {
-    scrollTopBtn.classList.remove("visible");
-  }
-});
+window.addEventListener(
+  "scroll",
+  () => {
+    if (window.pageYOffset > 300) {
+      scrollTopBtn.classList.add("visible");
+    } else {
+      scrollTopBtn.classList.remove("visible");
+    }
+  },
+  { passive: true }
+);
 
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({
@@ -551,23 +595,25 @@ scrollTopBtn.addEventListener("click", () => {
 const sections = document.querySelectorAll("section[id]");
 const navItems = document.querySelectorAll(".nav-links a");
 
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (window.pageYOffset >= sectionTop - 100) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navItems.forEach((item) => {
-    item.classList.remove("active");
-    if (item.getAttribute("href") === `#${current}`) {
-      item.classList.add("active");
-    }
-  });
-});
+window.addEventListener(
+  "scroll",
+  () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (window.pageYOffset >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+    navItems.forEach((item) => {
+      item.classList.remove("active");
+      if (item.getAttribute("href") === `#${current}`) {
+        item.classList.add("active");
+      }
+    });
+  },
+  { passive: true }
+);
 
 // ========== MULTI-TEXT TYPING ANIMATION ==========
 const tagline = document.querySelector(".tagline");
@@ -707,10 +753,11 @@ contactForm.addEventListener("submit", function (e) {
     });
 });
 
-// ========== PARTICLES BACKGROUND ==========
+// ========== PARTICLES BACKGROUND (reduced on mobile for performance) ==========
 function createParticles() {
   const particlesContainer = document.getElementById("particles");
-  const particleCount = 50;
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const particleCount = isMobile ? 12 : 50;
 
   for (let i = 0; i < particleCount; i++) {
     const particle = document.createElement("div");
@@ -719,12 +766,14 @@ function createParticles() {
     particle.style.height = particle.style.width;
     particle.style.background = "var(--primary)";
     particle.style.borderRadius = "50%";
-    particle.style.opacity = Math.random() * 0.3;
+    particle.style.opacity = Math.random() * 0.25 + 0.05;
     particle.style.left = Math.random() * 100 + "%";
     particle.style.top = Math.random() * 100 + "%";
-    particle.style.animation = `floatParticle ${
-      Math.random() * 10 + 10
-    }s linear infinite`;
+    if (!isMobile) {
+      particle.style.animation = `floatParticle ${
+        Math.random() * 10 + 10
+      }s linear infinite`;
+    }
     particlesContainer.appendChild(particle);
   }
 }
@@ -755,11 +804,30 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+// ========== FOOTER COPYRIGHT YEAR ==========
+const copyrightEl = document.getElementById("copyrightYear");
+if (copyrightEl) {
+  const year = new Date().getFullYear();
+  copyrightEl.textContent = year > 2025 ? `2025 - ${year}` : "2025";
+}
+
 // ========== INITIALIZE ==========
-document.addEventListener("DOMContentLoaded", () => {
+function initPortfolio() {
   renderProjects("all");
   createParticles();
-});
+  const projectsSection = document.getElementById("projects");
+  if (projectsSection && projectsSection.classList.contains("fade-in")) {
+    observer.observe(projectsSection);
+  }
+  requestAnimationFrame(revealVisibleFadeElements);
+  setTimeout(revealVisibleFadeElements, 150);
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initPortfolio);
+} else {
+  initPortfolio();
+}
 
 // ========== CONSOLE SIGNATURE ==========
 console.log(
