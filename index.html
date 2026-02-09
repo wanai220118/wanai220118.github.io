@@ -64,7 +64,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">References</a></li>
                 <li><a href="assets/pdf/resume-tuan-khalidah-syazwana.pdf" class="resume-btn" download><i
                             class="fas fa-download"></i> Resume</a></li>
             </ul>
@@ -166,8 +166,8 @@
                 </div>
                 <div class="stat-card">
                     <i class="fas fa-graduation-cap"></i>
-                    <h3>3.42</h3>
-                    <p>CGPA</p>
+                    <h3>3.50</h3>
+                    <p>GPA</p>
                 </div>
             </div>
         </div>
@@ -190,6 +190,9 @@
             </button>
             <button class="tab-btn" data-tab="certificates">
                 <i class="fas fa-certificate"></i> Certificates
+            </button>
+            <button class="tab-btn" data-tab="rhb">
+                <i class="fas fa-user-tie"></i> RHB X-Cel Star
             </button>
         </div>
 
@@ -237,7 +240,7 @@
                                 </div>
                             </div>
                             <div class="achievement">
-                                <i class="fas fa-star"></i> Current CGPA: 3.42
+                                <i class="fas fa-star"></i> GPA: 3.50
                             </div>
                             <p>Comprehensive study in software engineering principles, algorithms, data structures, and
                                 modern development practices.</p>
@@ -403,23 +406,47 @@
                             <i class="fas fa-external-link-alt"></i> View Certificate
                         </button>
                     </div>
-                    <div class="certificate-card">
-                        <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
-                        <i class="fas fa-user-tie"></i>
-                        <h4>RHB X-CEL Star Mentoring Programme (Cohort 3)</h4>
-                        <span class="cert-date">December 2023</span>
-                        <button class="btn-view-cert" onclick="viewCertificate('cert9')">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </button>
+                </div>
+            </div>
+
+            <!-- RHB X-Cel Star Tab -->
+            <div class="tab-pane" id="rhb">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="experience-header">
+                                <img src="assets/images/dummy.png" alt="RHB X-Cel Star" class="experience-logo">
+                                <div class="experience-info">
+                                    <h3>RHB X-CEL Star Mentoring Programme (Cohort 3)</h3>
+                                    <span class="company"><i class="fas fa-building"></i> RHB Banking Group</span>
+                                    <div class="timeline-date">
+                                        <i class="far fa-calendar"></i> December 2023
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Participated in a structured mentoring programme focused on professional growth, industry
+                                insights, and career development, including one-to-one mentoring sessions with industry
+                                professionals.</p>
+                        </div>
                     </div>
-                    <div class="certificate-card">
-                        <img src="assets/images/dummy.png" alt="Certificate" class="cert-image">
-                        <i class="fas fa-comments"></i>
-                        <h4>RHB X-Cel Star English Communications & Confidence Training</h4>
-                        <span class="cert-date">August 2022</span>
-                        <button class="btn-view-cert" onclick="viewCertificate('cert10')">
-                            <i class="fas fa-external-link-alt"></i> View Certificate
-                        </button>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="experience-header">
+                                <img src="assets/images/dummy.png" alt="RHB X-Cel Star English Training"
+                                    class="experience-logo">
+                                <div class="experience-info">
+                                    <h3>RHB X-Cel Star English Communications & Confidence Training</h3>
+                                    <span class="company"><i class="fas fa-chalkboard-teacher"></i> RHB X-Cel Star Programme</span>
+                                    <div class="timeline-date">
+                                        <i class="far fa-calendar"></i> August 2022
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Completed an intensive communication and confidence-building programme designed to enhance
+                                professional English communication skills, presentation ability, and personal branding.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -562,40 +589,70 @@
         </div>
     </div>
 
-    <!-- Contact Section -->
+    <!-- References Section -->
     <section id="contact" class="section fade-in">
         <div class="section-header">
-            <h2>Get In Touch</h2>
-            <p>Let's connect and discuss opportunities</p>
+            <h2>References</h2>
+            <p>Professional references who can speak to my work and character</p>
         </div>
 
         <div class="contact-container">
-            <!-- Contact Form -->
+            <!-- References List -->
             <div class="contact-form-wrapper">
-                <h3><i class="fas fa-paper-plane"></i> Send Me a Message</h3>
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="name"><i class="fas fa-user"></i> Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                <h3><i class="fas fa-address-book"></i> Professional References</h3>
+                <div class="references-list">
+                    <div class="reference-card">
+                        <div class="reference-header">
+                            <div class="reference-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h4>En. Ahmad Nordin Bin Alias</h4>
+                                <p class="reference-role">Penolong Kanan Setiausaha (Teknologi Maklumat)</p>
+                                <p class="reference-organization">Majlis Agama Islam Dan Adat Melayu Terengganu (MAIDAM)</p>
+                            </div>
+                        </div>
+                        <div class="reference-body">
+                            <p><i class="fas fa-phone"></i> 09-630 3099</p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:anordin@maidam.gov.my">anordin@maidam.gov.my</a></p>
+                            <p class="reference-note"><i class="fas fa-info-circle"></i> He was my industrial training supervisor.</p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    <div class="reference-card">
+                        <div class="reference-header">
+                            <div class="reference-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h4>Dr. Mohd Hamdi Irwan Bin Hamzah</h4>
+                                <p class="reference-role">DS13 Senior Lecturer</p>
+                                <p class="reference-organization">Faculty of Computer Science and Information Technology, UTHM</p>
+                            </div>
+                        </div>
+                        <div class="reference-body">
+                            <p><i class="fas fa-phone"></i> 07-453 3757</p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:hamdi@uthm.edu.my">hamdi@uthm.edu.my</a></p>
+                            <p class="reference-note"><i class="fas fa-info-circle"></i> He was the supervisor for my final year project, titled GlowGuide Mobile Application.</p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="subject"><i class="fas fa-tag"></i> Subject</label>
-                        <input type="text" id="subject" name="subject" required placeholder="Subject">
+                    <div class="reference-card">
+                        <div class="reference-header">
+                            <div class="reference-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h4>Dr. Noor Zuraidin Bin Mohd Safar</h4>
+                                <p class="reference-role">DS13 Senior Lecturer</p>
+                                <p class="reference-organization">Faculty of Computer Science and Information Technology, UTHM</p>
+                            </div>
+                        </div>
+                        <div class="reference-body">
+                            <p><i class="fas fa-phone"></i> 07-453 3663</p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:zuraidin@uthm.edu.my">zuraidin@uthm.edu.my</a></p>
+                            <p class="reference-note"><i class="fas fa-info-circle"></i> He was my academic supervisor throughout my degree program.</p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message"><i class="fas fa-comment"></i> Message</label>
-                        <textarea id="message" name="message" rows="5" required
-                            placeholder="Your message here..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                    <div id="formStatus" class="form-status"></div>
-                </form>
+                </div>
             </div>
 
             <!-- Contact Info -->

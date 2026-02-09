@@ -11,7 +11,7 @@ const certificateImages = [
   "assets/images/sas-overview.png",
   "assets/images/cisco.png",
   "assets/images/seminarwarisan.jpg",
-  "assets/images/dummy.png",
+  "assets/images/Mentoring-Programme.jpg",
   "assets/images/dummy.png",
 ];
 

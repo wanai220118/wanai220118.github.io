@@ -1416,6 +1416,113 @@ body.dark-mode .contact-info-card {
     text-decoration: underline;
 }
 
+/* Professional References */
+.references-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.reference-card {
+    position: relative;
+    background: var(--bg-light);
+    padding: 1.5rem 1.75rem;
+    border-radius: 14px;
+    border: 2px solid var(--border-light);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+body.dark-mode .reference-card {
+    background: var(--bg-dark);
+    border-color: var(--border-dark);
+}
+
+.reference-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient);
+}
+
+.reference-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
+}
+
+.reference-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.reference-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(234, 162, 57, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.reference-icon i {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.4rem;
+}
+
+.reference-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.15rem;
+    color: var(--primary);
+}
+
+.reference-role {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.reference-organization {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.reference-body p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+.reference-body i {
+    margin-right: 0.4rem;
+    color: var(--primary);
+}
+
+.reference-body a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.reference-body a:hover {
+    text-decoration: underline;
+}
+
+.reference-note {
+    margin-top: 0.4rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
 /* Footer */
 footer {
     background: var(--card-light);
