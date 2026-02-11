@@ -3,17 +3,17 @@ emailjs.init("mMer3rnqTxT5ZF7v-"); // Replace with your EmailJS User ID
 
 // ========== CERTIFICATE IMAGES ==========
 const certificateImages = [
-  "assets/images/data-mining.jpeg",
-  "assets/images/data-structure.png",
-  "assets/images/power-bi.jpg",
-  "assets/images/pbi-beginner.jpg",
-  "assets/images/sas-basic.png",
-  "assets/images/sas-overview.png",
-  "assets/images/cisco.png",
-  "assets/images/seminarwarisan.jpg",
-  "assets/images/IMG_20260209_191109_103.jpg",
-  "assets/images/IMG_20260209_191108_662.jpg",
-  "assets/images/sijil-tamat-intern.jpg",
+  "assets/images/sijil/data-mining.jpeg",
+  "assets/images/sijil/data-structure.png",
+  "assets/images/sijil/power-bi.jpg",
+  "assets/images/sijil/pbi-beginner.jpg",
+  "assets/images/sijil/sas-basic.png",
+  "assets/images/sijil/sas-overview.png",
+  "assets/images/sijil/cisco.png",
+  "assets/images/sijil/seminarwarisan.jpg",
+  "assets/images/sijil/IMG_20260209_191109_103.jpg",
+  "assets/images/sijil/IMG_20260209_191108_662.jpg",
+  "assets/images/sijil/sijil-tamat-intern.jpg",
 ];
 
 // ========== PROJECTS DATA ==========
