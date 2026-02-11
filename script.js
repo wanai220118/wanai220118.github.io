@@ -26,9 +26,10 @@ const projects = [
     type: "E-Commerce Website",
     category: "web",
     icon: "fa-shopping-cart",
-    description: `Developed a modern, responsive e-commerce website featuring a structured product catalog, best-seller highlights, detailed product pages, and a dynamic shopping cart with quantity controls. Integrated a WhatsApp-based ordering system with automated message formatting and cart clearing, optimizing the checkout flow and enhancing user convenience across devices. Live: https://cheezncream.netlify.app/`,
+    description: `Developed a modern, responsive e-commerce website featuring a structured product catalog, best-seller highlights, detailed product pages, and a dynamic shopping cart with quantity controls. Integrated a WhatsApp-based ordering system with automated message formatting and cart clearing, optimizing the checkout flow and enhancing user convenience across devices.`,
     tech: ["HTML", "CSS", "JavaScript", "Responsive Design", "WhatsApp API"],
     github: "https://github.com/wanai220118/cnc-menu-and-ordering",
+    liveUrl: "https://cheezncream.netlify.app/",
     screenshots: [
       "assets/images/project/cmo-1.png",
       "assets/images/project/cmo-2.png",
@@ -64,6 +65,7 @@ const projects = [
     description: `Developed a PHP–MySQL system supporting four user roles (User, Sub-Admin, Admin, Court) with role-based access control. Automated application, renewal, appeal, payment, interview, and approval workflows, significantly reducing manual processing. Designed a structured, auditable process aligned with real-world certification requirements.`,
     tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "XAMPP"],
     github: "https://github.com/wanai220118/Sistem-Pengurusan-Peguam-Syarie",
+    liveUrl: "https://apps.maidam.gov.my/syarie/login.php",
     screenshots: [
       "assets/images/project/sps-1.png",
       "assets/images/project/sps-2.png",
@@ -366,6 +368,15 @@ function openProjectModal(projectId) {
       a.innerHTML = `<i class="fas ${doc.icon}"></i> ${doc.label}`;
       linksContainer.appendChild(a);
     });
+  }
+  if (project.liveUrl) {
+    const liveLink = document.createElement("a");
+    liveLink.href = project.liveUrl;
+    liveLink.target = "_blank";
+    liveLink.rel = "noopener noreferrer";
+    liveLink.className = "modal-btn modal-btn-live";
+    liveLink.innerHTML = '<i class="fas fa-external-link-alt"></i> Live view';
+    linksContainer.appendChild(liveLink);
   }
   if (project.github && project.github !== "#") {
     const githubLink = document.createElement("a");
