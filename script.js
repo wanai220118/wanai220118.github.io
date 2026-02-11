@@ -412,10 +412,15 @@ function openProjectModal(projectId) {
 
 // ========== CERTIFICATE MODAL ==========
 function viewCertificate(certId) {
-  const index = parseInt(certId.replace("cert", "")) - 1;
+  const index = parseInt(certId.replace("cert", ""), 10) - 1;
+  if (index < 0 || index >= certificateImages.length) return;
   const certImage = certificateImages[index];
-  document.getElementById("certFullImage").src = certImage;
-  document.getElementById("certificateModal").style.display = "block";
+  const imgEl = document.getElementById("certFullImage");
+  const modalEl = document.getElementById("certificateModal");
+  if (!imgEl || !modalEl) return;
+  imgEl.src = certImage;
+  imgEl.alt = "Certificate";
+  modalEl.style.display = "block";
   document.body.style.overflow = "hidden";
 }
 
@@ -766,45 +771,51 @@ statCards.forEach((card) => {
 });
 
 // ========== CONTACT FORM WITH EMAILJS ==========
+// (Form removed – section is now References; keep listener only if form exists)
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
 
-contactForm.addEventListener("submit", function (e) {
-  e.preventDefault();
+if (contactForm && formStatus) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const submitBtn = contactForm.querySelector(".btn-submit");
-  const originalBtnText = submitBtn.innerHTML;
-  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-  submitBtn.disabled = true;
+    const submitBtn = contactForm.querySelector(".btn-submit");
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : "";
+    if (submitBtn) {
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      submitBtn.disabled = true;
+    }
 
-  const templateParams = {
-    from_name: document.getElementById("name").value,
-    from_email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value,
-    to_name: "Tuan Khalidah Syazwana",
-  };
+    const templateParams = {
+      from_name: document.getElementById("name")?.value || "",
+      from_email: document.getElementById("email")?.value || "",
+      subject: document.getElementById("subject")?.value || "",
+      message: document.getElementById("message")?.value || "",
+      to_name: "Tuan Khalidah Syazwana",
+    };
 
-  // Replace with your EmailJS Service ID and Template ID
-  emailjs
-    .send("service_kv1i1mi", "template_sqkolz9", templateParams)
-    .then(function (response) {
-      formStatus.textContent = "✓ Message sent successfully!";
-      formStatus.className = "form-status success";
-      contactForm.reset();
-      setTimeout(() => (formStatus.style.display = "none"), 5000);
-    })
-    .catch(function (error) {
-      formStatus.textContent = "✗ Failed to send message. Please try again.";
-      formStatus.className = "form-status error";
-      console.error("EmailJS Error:", error);
-      setTimeout(() => (formStatus.style.display = "none"), 5000);
-    })
-    .finally(() => {
-      submitBtn.innerHTML = originalBtnText;
-      submitBtn.disabled = false;
-    });
-});
+    emailjs
+      .send("service_kv1i1mi", "template_sqkolz9", templateParams)
+      .then(function (response) {
+        formStatus.textContent = "✓ Message sent successfully!";
+        formStatus.className = "form-status success";
+        contactForm.reset();
+        setTimeout(() => (formStatus.style.display = "none"), 5000);
+      })
+      .catch(function (error) {
+        formStatus.textContent = "✗ Failed to send message. Please try again.";
+        formStatus.className = "form-status error";
+        console.error("EmailJS Error:", error);
+        setTimeout(() => (formStatus.style.display = "none"), 5000);
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.disabled = false;
+        }
+      });
+  });
+}
 
 // ========== PARTICLES BACKGROUND (reduced on mobile for performance) ==========
 function createParticles() {
