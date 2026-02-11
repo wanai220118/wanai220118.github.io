@@ -13,318 +13,272 @@ const certificateImages = [
   "assets/images/seminarwarisan.jpg",
   "assets/images/IMG_20260209_191109_103.jpg",
   "assets/images/IMG_20260209_191108_662.jpg",
+  "assets/images/sijil-tamat-intern.jpg",
 ];
 
 // ========== PROJECTS DATA ==========
+// Ordered newest to oldest
 const projects = [
   {
     id: 1,
-    title: "Syarie Lawyer System",
-    date: "August 2025 - Current",
-    type: "Web Application",
+    title: "CNC Menu and Ordering",
+    date: "February 2026",
+    type: "E-Commerce Website",
     category: "web",
-    icon: "fa-gavel",
-    description: `
-A web-based system built with PHP and MySQL to manage Syarie lawyer certifications. It supports three user roles — User (Lawyer), Admin, and Staff — each with specific access and responsibilities.
-
-Lawyers can apply for new certification, renewal, or appeal (rayuan), progressing through stages like payment, interview, and Majlis Tauliah approval. The platform streamlines the workflow for admins and staff to process applications efficiently.
-    `,
-    tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "XAMPP"],
-    github: "https://github.com/wanai220118/Sistem-Pengurusan-Peguam-Syarie",
+    icon: "fa-shopping-cart",
+    description: `Developed a modern, responsive e-commerce website featuring a structured product catalog, best-seller highlights, detailed product pages, and a dynamic shopping cart with quantity controls. Integrated a WhatsApp-based ordering system with automated message formatting and cart clearing, optimizing the checkout flow and enhancing user convenience across devices. Live: https://cheezncream.netlify.app/`,
+    tech: ["HTML", "CSS", "JavaScript", "Responsive Design", "WhatsApp API"],
+    github: "https://github.com/wanai220118/cnc-menu-and-ordering",
     screenshots: [
-      "assets/images/sls-1.png",
-      "assets/images/sls-2.png",
-      "assets/images/sls-3.png",
-      "assets/images/sls-4.png",
-      "assets/images/sls-5.png",
-      "assets/images/sls-6.jpg",
+      "assets/images/project/cmo-1.png",
+      "assets/images/project/cmo-2.png",
+      "assets/images/project/cmo-3.png",
+      "assets/images/project/cmo-4.png",
+      "assets/images/project/cmo-5.png",
+      "assets/images/project/cmo-6.png",
     ],
   },
-
   {
     id: 2,
-    title: "GlowGuide Mobile Application",
-    date: "October 2024 - June 2025",
-    type: "Mobile & Web Application",
+    title: "ZenFlow Tracker – Mobile Fitness Application",
+    date: "February 2026",
+    type: "Mobile Application (React Native)",
     category: "mobile",
-    icon: "fa-mobile-alt",
-    description:
-      "Developed a mobile application integrating both e-commerce features and online consultation booking for treatment services. Built a web-based admin panel using the Laravel framework for managing users, products, and bookings.",
-    tech: ["Java", "Android Studio", "Laravel", "Firebase", "MySQL"],
-    github: "https://github.com/wanai220118/GlowGuide_MobileApp",
+    icon: "fa-running",
+    description: `Built a cross-platform fitness tracking app using React Native and Expo with offline-first architecture via AsyncStorage. Implemented exercise routines, timers, progress analytics, statistics dashboards, and data export, increasing usability for long-term tracking. Integrated video-based exercise guidance and clean UI components for improved user engagement.`,
+    tech: ["React Native", "Expo", "AsyncStorage", "JavaScript"],
+    github: "https://github.com/wanai220118/ZenFlow_Tracker",
     screenshots: [
-      "assets/images/gg-1.png",
-      "assets/images/gg-2.png",
-      "assets/images/gg-3.png",
-      "assets/images/gg-4.png",
-      "assets/images/gg-5.png",
-      "assets/images/gg-6.png",
+      "assets/images/project/et-1.png",
+      "assets/images/project/et-2.png",
+      "assets/images/project/et-3.png",
     ],
   },
   {
     id: 3,
-    title: "Rice Leaf Disease Detection Using CNN",
-    date: "June 2025",
-    type: "Machine Learning | Group Project",
-    category: "ai",
-    icon: "fa-brain",
-    description:
-      "Implemented deep convolutional neural network (CNN) models to classify and detect rice leaf diseases from image data. Applied image preprocessing, training, and evaluation to develop an automated disease detection system with high accuracy.",
-    tech: ["Python", "TensorFlow", "CNN", "Image Processing"],
-    github:
-      "https://github.com/wanai220118/Image-Based-Detection-of-Rice-Leaf-Diseases-Using-Deep-CNN-Models",
-    screenshots: ["assets/images/rice.png"],
+    title: "Sistem Pengurusan Peguam Syarie (Web-Based)",
+    date: "August 2025 – January 2026",
+    type: "Web Application",
+    category: "web",
+    icon: "fa-gavel",
+    description: `Developed a PHP–MySQL system supporting four user roles (User, Sub-Admin, Admin, Court) with role-based access control. Automated application, renewal, appeal, payment, interview, and approval workflows, significantly reducing manual processing. Designed a structured, auditable process aligned with real-world certification requirements.`,
+    tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "XAMPP"],
+    github: "https://github.com/wanai220118/Sistem-Pengurusan-Peguam-Syarie",
+    screenshots: [
+      "assets/images/project/sps-1.png",
+      "assets/images/project/sps-2.png",
+      "assets/images/project/sps-3.png",
+      "assets/images/project/sps-4.png",
+      "assets/images/project/sps-5.png",
+      "assets/images/project/sps-6.png",
+    ],
   },
   {
     id: 4,
-    title: "Diabetes Prediction System",
-    date: "May 2025",
-    type: "Machine Learning | Group Project",
-    category: "ai",
-    icon: "fa-heartbeat",
-    description:
-      "Built a predictive model using classification algorithms like Random Forest, Logistic Regression, and K-Nearest Neighbors (KNN) on a diabetes dataset.",
-    tech: ["Python", "Scikit-learn", "Pandas", "Machine Learning"],
-    github:
-      "https://github.com/wanai220118/Predicting-Diabetes-with-Classification-Algorithm",
+    title: "Cheez n' Cream – Admin Mobile Application",
+    date: "December 2025",
+    type: "Mobile Application (Flutter & Firebase)",
+    category: "mobile",
+    icon: "fa-mobile-alt",
+    description: `Developed a Flutter admin app with real-time Firebase Firestore synchronization for products, orders, customers, and expenses. Implemented secure authentication, live dashboards, PDF report generation, and daily sales summaries. Delivered a modern, animated UI with real-time analytics to support business decision-making.`,
+    tech: ["Flutter", "Firebase", "Firestore", "Dart"],
+    github: "https://github.com/wanai220118/cheez_admin_app",
     screenshots: [
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
+      "assets/images/project/cnc-1.png",
+      "assets/images/project/cnc-2.png",
+      "assets/images/project/cnc-3.png",
+      "assets/images/project/cnc-4.png",
+      "assets/images/project/cnc-5.png",
+      "assets/images/project/cnc-6.png",
     ],
   },
   {
     id: 5,
-    title: "Shortest Path Algorithm Analysis",
-    date: "April 2025",
-    type: "Algorithm Analysis | Group Project",
-    category: "data",
-    icon: "fa-route",
-    description:
-      "Analyzed and compared various shortest path algorithms such as Dijkstra's, Breadth First Search and Depth First Search for performance and efficiency.",
-    tech: ["Python", "Algorithms", "Data Structures", "Graph Theory"],
-    github: "https://github.com/yourusername/shortest-path-analysis",
-    screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
+    title: "Personal Portfolio Website",
+    date: "November 2025",
+    type: "Web Application",
+    category: "web",
+    icon: "fa-globe",
+    description: `Designed and deployed a responsive portfolio website showcasing projects, skills, certificates, and contact features. Implemented light/dark mode, animations, SEO optimization, interactive modals, and GitHub Pages deployment.`,
+    tech: ["HTML", "CSS", "JavaScript", "GitHub Pages", "SEO"],
+    github: "https://github.com/wanai220118/wanai220118.github.io",
+    screenshots: [
+      "assets/images/project/pf-1.png",
+      "assets/images/project/pf-2.png",
+      "assets/images/project/pf-3.png",
+    ],
   },
   {
     id: 6,
-    title: "Air Quality Analysis in India",
-    date: "2024",
-    type: "Data Analytics | Group Project",
-    category: "data",
-    icon: "fa-wind",
-    description:
-      "Used Power BI and DAX formulas to analyze and visualize air quality data. Applied various analytics methods to assess health implications.",
-    tech: ["Power BI", "DAX", "Data Analytics", "Visualization"],
-    github: "https://github.com/yourusername/air-quality-india",
+    title: "GlowGuide – E-Commerce & Consultation Mobile App",
+    date: "October 2024 – June 2025",
+    type: "Mobile & Web Application",
+    category: "mobile",
+    icon: "fa-shopping-bag",
+    description: `Built an Android application (Java) integrating product purchasing and online consultation booking. Developed a Laravel-based admin panel for managing users, products, orders, and bookings. Implemented real-time data synchronization and user-friendly UI to improve customer experience. Demo: https://www.youtube.com/watch?v=BB_3NAu6uUw`,
+    tech: ["Java", "Android Studio", "Laravel", "Firebase", "MySQL"],
+    github: "https://github.com/wanai220118/GlowGuide_MobileApp",
     screenshots: [
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
+      "assets/images/project/gg-1.png",
+      "assets/images/project/gg-2.png",
+      "assets/images/project/gg-3.png",
+      "assets/images/project/gg-4.png",
+      "assets/images/project/gg-5.png",
+      "assets/images/project/gg-6.png",
+    ],
+  },
+  {
+    id: 10,
+    title: "Image-Based Detection of Rice Leaf Diseases Using Deep CNN Models",
+    date: "June 2025",
+    type: "Machine Learning",
+    category: "ai",
+    icon: "fa-brain",
+    description: `Implemented deep convolutional neural network (CNN) models to classify and detect rice leaf diseases from image data. Applied image preprocessing, training, and evaluation to develop an automated disease detection system with high accuracy.`,
+    tech: ["Python", "TensorFlow", "CNN", "Image Processing"],
+    github: "https://github.com/wanai220118/Image-Based-Detection-of-Rice-Leaf-Diseases-Using-Deep-CNN-Models",
+    screenshots: ["assets/images/project/rice.png"],
+  },
+  {
+    id: 11,
+    title: "Predicting Diabetes with Classification Algorithm",
+    date: "May 2025",
+    type: "Machine Learning",
+    category: "ai",
+    icon: "fa-heartbeat",
+    description: `Built a predictive model using classification algorithms like Random Forest, Logistic Regression, and K-Nearest Neighbors (KNN) on a diabetes dataset. Applied data preprocessing, feature selection, and model evaluation techniques to improve prediction accuracy.`,
+    tech: ["Python", "Scikit-learn", "Pandas", "Machine Learning"],
+    github: "https://github.com/wanai220118/Predicting-Diabetes-with-Classification-Algorithm",
+    screenshots: ["assets/images/project/diabetes.png"],
+  },
+  {
+    id: 12,
+    title: "Evaluating Shortest Path Solutions",
+    date: "April 2025",
+    type: "Algorithm Analysis",
+    category: "data",
+    icon: "fa-route",
+    description: `Analyzed and compared various shortest path algorithms such as Dijkstra's, Breadth First Search and Depth First Search for performance and efficiency. Evaluated algorithmic complexity and accuracy across different graph structures and datasets.`,
+    tech: ["Python", "Algorithms", "Data Structures", "Graph Theory"],
+    github: "https://github.com/wanai220118/Evaluating-Shortest-Path-Solutions-A-Performance-Comparison-of-Dijkstra-BFS-and-DFS-Algorithms",
+    screenshots: [
+      "assets/images/project/bfs.png",
+      "assets/images/project/dfs.png",
+      "assets/images/project/dijkstra.png",
     ],
   },
   {
     id: 7,
-    title: "E-KOOP Inventory System",
-    date: "July 2024 - January 2025",
-    type: "Web Application | Group Project",
+    title: "FRIENDS_WebApp",
+    date: "January 2025",
+    type: "Full-Stack Web Application",
     category: "web",
-    icon: "fa-warehouse",
-    description:
-      "Developed a web-based system to track and manage inventory, including product details, stock levels, and reorder points.",
-    tech: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
-    github: "https://github.com/yourusername/ekoop-inventory",
-    screenshots: [
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
+    icon: "fa-users",
+    description: `Developed a full-stack ASP.NET Core MVC web application with complete CRUD functionality for managing friends, favorite songs, food records, and photo galleries. Implemented secure user authentication and authorization using ASP.NET Identity, ensuring protected access to personal data. Designed a responsive, visually engaging UI with custom themes, gradient backgrounds, toast notifications, and nostalgic branding to enhance usability and user engagement. Demo: https://drive.google.com/file/d/18Czle85TwMlA12vscL_5cU6MsdjK5IO9/view?usp=sharing`,
+    tech: ["ASP.NET Core", "MVC", "C#", "ASP.NET Identity", "Entity Framework"],
+    github: "https://github.com/wanai220118/FRIENDS_WebApp",
+    screenshots: ["assets/images/project/friends.png"],
+  },
+  {
+    id: 13,
+    title: "Analyzing Air Quality And Health Impact In India",
+    date: "January 2025",
+    type: "Data Analytics",
+    category: "data",
+    icon: "fa-wind",
+    description: `Used Power BI and DAX formulas to analyze and visualize air quality data. Applied various analytics methods (descriptive to prescriptive) to assess health implications.`,
+    tech: ["Power BI", "DAX", "Data Analytics", "Visualization"],
+    github: "#",
+    documents: [
+      { label: "View PDF", url: "assets/pdf/g3report_datascience.pdf", icon: "fa-file-pdf" },
     ],
+    screenshots: [],
   },
   {
     id: 8,
-    title: "SOHO & Campus Network Design",
-    date: "June 2024",
-    type: "Network Design | Group Project",
-    category: "network",
-    icon: "fa-network-wired",
-    description:
-      "Designed a secure and efficient network for small offices and developed a comprehensive campus-wide network for a college.",
-    tech: ["Cisco Packet Tracer", "Network Design", "VLAN", "Security"],
-    github: "https://github.com/yourusername/network-design",
-    screenshots: [
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-    ],
+    title: "E-KOOP Inventory Web Based System",
+    date: "July 2024",
+    type: "Web Application",
+    category: "web",
+    icon: "fa-warehouse",
+    description: `Developed a database-driven inventory management system to track products, stock levels, suppliers, transactions, and reorder points, improving inventory accuracy and control. Designed and managed a relational database schema, ensuring data integrity, efficient queries, and seamless updates across inventory operations.`,
+    tech: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
+    github: "https://github.com/SerenaNYX/e-koop_system",
+    screenshots: ["assets/images/project/ekoop.png"],
   },
   {
     id: 9,
     title: "Tic-Tac-Toe Game App",
-    date: "2024",
-    type: "Desktop Application | Group Project",
+    date: "June 2024",
+    type: "Desktop Application",
     category: "web",
     icon: "fa-gamepad",
-    description:
-      "Built an interactive Tic Tac Toe game using Java. Implemented game logic and GUI components.",
+    description: `Built an interactive Tic-Tac-Toe game using Java, implementing complete game logic, win/draw detection, and turn-based controls. Designed GUI components to deliver a smooth and intuitive gameplay experience.`,
     tech: ["Java", "Swing", "GUI", "Game Development"],
     github: "https://github.com/wanai220118/Tic-Tac-Toe_Game_Application",
-    screenshots: ["assets/images/ttt.png"],
-  },
-  {
-    id: 10,
-    title: "Server-Client Messaging in VM",
-    date: "January 2024",
-    type: "Systems Programming | Group Project",
-    category: "network",
-    icon: "fa-server",
-    description:
-      "Executed server-client messaging and backup operations in a virtual environment using Kali Linux and Ubuntu.",
-    tech: ["Linux", "Shell Scripting", "Networking", "Virtual Machines"],
-    github: "https://github.com/yourusername/server-client-vm",
-    screenshots: [
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-    ],
-  },
-  {
-    id: 11,
-    title: "Laundry Management System",
-    date: "January 2024",
-    type: "UI/UX Design | Group Project",
-    category: "design",
-    icon: "fa-tshirt",
-    description:
-      "Designed a prototype interface for a laundry service system using Canva.",
-    tech: ["Canva", "UI/UX", "Prototyping", "Design"],
-    github: "https://github.com/yourusername/laundry-system",
-    screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
-  },
-  {
-    id: 12,
-    title: "EzBook Application",
-    date: "January 2024",
-    type: "UI/UX Design | Group Project",
-    category: "design",
-    icon: "fa-calendar-check",
-    description:
-      "Created a user-centered prototype for a booking application using Figma.",
-    tech: ["Figma", "UI/UX", "HCI", "Prototyping"],
-    github: "https://github.com/yourusername/ezbook",
-    screenshots: [
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-    ],
-  },
-  {
-    id: 13,
-    title: "Employee Payroll System",
-    date: "January 2024",
-    type: "Desktop Application | Group Project",
-    category: "web",
-    icon: "fa-money-check-alt",
-    description:
-      "Developed a system to calculate and manage employee salaries using OOP principles.",
-    tech: ["Java", "OOP", "Database", "Swing"],
-    github: "https://github.com/wanai220118/Employee-Payroll-System",
-    screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
+    screenshots: ["assets/images/project/ttt.png"],
   },
   {
     id: 14,
-    title: "H2OTrack – Smart Bottle Ring",
-    date: "2024",
-    type: "Product Design | Group Project",
-    category: "design",
-    icon: "fa-tint",
-    description:
-      "Designed an innovative smart bottle accessory prototype using Figma.",
-    tech: ["Figma", "Product Design", "IoT Concept", "UI/UX"],
-    github: "https://github.com/yourusername/h2otrack",
-    screenshots: [
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
-      "assets/images/dummy.png",
+    title: "SOHO & Campus Network Design",
+    date: "June 2024",
+    type: "Network Design",
+    category: "network",
+    icon: "fa-network-wired",
+    description: `Designed a secure and efficient network for small offices or home offices, including a guest network for visitors to ensure security and privacy for internal resources. Developed a comprehensive campus-wide network for a college, focusing on scalability, security, and connectivity to support academic, administrative, and guest services across the campus.`,
+    tech: ["Cisco Packet Tracer", "Network Design", "VLAN", "Security"],
+    github: "#",
+    documents: [
+      { label: "View PKT (Campus)", url: "assets/campusnetworkdesignforacollege-part2-group2-28s4-29.pkt", icon: "fa-file-alt" },
+      { label: "View PKT (Project)", url: "assets/projectv8.pkt", icon: "fa-file-alt" },
+      { label: "View PDF", url: "assets/pdf/reportcomputernetworkG1.pdf", icon: "fa-file-pdf" },
     ],
+    screenshots: [],
   },
   {
     id: 15,
-    title: "Map Coloring using DFS",
-    date: "December 2023",
-    type: "Algorithm Implementation | Group Project",
-    category: "data",
-    icon: "fa-map",
-    description:
-      "Utilized Depth First Search (DFS) to solve the classic map coloring problem.",
-    tech: ["Python", "Algorithms", "Graph Theory", "DFS"],
-    github:
-      "https://github.com/wanai220118/Evaluating-Shortest-Path-Solutions-A-Performance-Comparison-of-Dijkstra-BFS-and-DFS-Algorithms",
-    screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
+    title: "Scripting & Server-Client Messaging in Virtual Machine",
+    date: "January 2024",
+    type: "Systems Programming",
+    category: "network",
+    icon: "fa-server",
+    description: `Executed server-client messaging and backup operations in a virtual environment using Kali Linux and Ubuntu. Demonstrated basic scripting and communication protocols within virtual machines.`,
+    tech: ["Linux", "Shell Scripting", "Networking", "Virtual Machines"],
+    github: "#",
+    documents: [
+      { label: "View PDF", url: "assets/pdf/g12reportpdfver.pdf", icon: "fa-file-pdf" },
+    ],
+    screenshots: [],
   },
   {
     id: 16,
-    title: "Network Setup in Virtual Machine",
-    date: "October 2023",
-    type: "System Configuration | Group Project",
-    category: "network",
-    icon: "fa-desktop",
-    description:
-      "Configured a virtual network environment using Oracle VirtualBox and Ubuntu OS.",
-    tech: ["VirtualBox", "Ubuntu", "Networking", "System Admin"],
-    github: "https://github.com/yourusername/vm-network-setup",
-    screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
+    title: "Depth First Search (Graph: Map Coloring)",
+    date: "December 2023",
+    type: "Algorithm Implementation",
+    category: "data",
+    icon: "fa-map",
+    description: `Utilized Depth First Search (DFS) to traverse and color the regions of a map (represented as a graph) such that no two adjacent regions share the same color. Demonstrated concepts from graph theory, particularly node adjacency and traversal algorithms, to solve the classic map coloring problem effectively.`,
+    tech: ["Python", "Algorithms", "Graph Theory", "DFS"],
+    github: "#",
+    documents: [
+      { label: "View PDF", url: "assets/pdf/DS-G17.pdf", icon: "fa-file-pdf" },
+    ],
+    screenshots: [],
   },
   {
     id: 17,
-    title: "Bridal Management System",
-    date: "June 2023",
-    type: "Software Engineering | Group Project",
-    category: "web",
-    icon: "fa-ring",
-    description:
-      "Presented a structured approach to bridal service management system development.",
-    tech: ["Software Engineering", "Documentation", "Planning", "UML"],
-    github: "https://github.com/yourusername/bridal-management",
-    screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
-  },
-  {
-    id: 18,
-    title: "Online Teaching Effectiveness Study",
-    date: "June 2023",
-    type: "Data Analysis | Group Project",
-    category: "data",
-    icon: "fa-chart-bar",
-    description:
-      "Collected and analyzed data using SPSS to evaluate online teaching efficiency.",
-    tech: ["SPSS", "Data Analysis", "Statistics", "Research"],
-    github: "https://github.com/yourusername/online-teaching-study",
-    screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
-  },
-  {
-    id: 19,
-    title: "Algebra: Real Life Applications",
-    date: "January 2023",
-    type: "Mathematical Programming | Group Project",
-    category: "data",
-    icon: "fa-calculator",
-    description:
-      "Explored real-world applications of algebraic methods using C programming.",
-    tech: ["C", "Mathematics", "Algorithms", "Problem Solving"],
-    github: "https://github.com/yourusername/algebra-applications",
-    screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
-  },
-  {
-    id: 20,
-    title: "Car Parking Services",
-    date: "January 2023",
-    type: "Desktop Application | Group Project",
-    category: "web",
-    icon: "fa-parking",
-    description:
-      "Developed a C program to calculate parking hours and corresponding charges.",
-    tech: ["C", "DEV C++", "Console Application", "Logic"],
-    github: "https://github.com/wanai220118/Car-Parking-Services",
-    screenshots: ["assets/images/dummy.png", "assets/images/dummy.png"],
+    title: "Network Setting In Virtual Machine",
+    date: "October 2023",
+    type: "System Configuration",
+    category: "network",
+    icon: "fa-desktop",
+    description: `Configured a virtual network environment using Oracle VirtualBox and Ubuntu OS. Applied key concepts of OS structure and demonstrated essential skills in virtual machine operations.`,
+    tech: ["VirtualBox", "Ubuntu", "Networking", "System Admin"],
+    github: "#",
+    documents: [
+      { label: "View PDF", url: "assets/pdf/a1_g29.pdf", icon: "fa-file-pdf" },
+    ],
+    screenshots: [],
   },
 ];
 
@@ -343,15 +297,17 @@ function renderProjects(filter = "all") {
     projectCard.className = "project-card";
     projectCard.onclick = () => openProjectModal(project.id);
 
+    const thumbnailHtml =
+      project.screenshots.length > 0
+        ? `<img src="${project.screenshots[0]}" alt="${project.title}" class="project-thumbnail">`
+        : `<div class="project-thumbnail project-thumbnail--empty" aria-hidden="true"><i class="fas ${project.icon}"></i></div>`;
     projectCard.innerHTML = `
             <div class="project-header">
                 <i class="fas ${project.icon}"></i>
                 <h3>${project.title}</h3>
             </div>
             <div class="project-body">
-                <img src="${project.screenshots[0]}" alt="${
-      project.title
-    }" class="project-thumbnail">
+                ${thumbnailHtml}
                 <p>${project.description.substring(0, 120)}...</p>
                 <div class="project-date">
                     <i class="far fa-calendar"></i>
@@ -397,10 +353,33 @@ function openProjectModal(projectId) {
     "modalType"
   ).innerHTML = `<i class="fas fa-tag"></i> ${project.type}`;
   document.getElementById("modalDescription").textContent = project.description;
-  document.getElementById("modalGithub").href = project.github;
+
+  const linksContainer = document.getElementById("modalLinks");
+  linksContainer.innerHTML = "";
+  if (project.documents && project.documents.length > 0) {
+    project.documents.forEach((doc) => {
+      const a = document.createElement("a");
+      a.href = doc.url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.className = "modal-btn";
+      a.innerHTML = `<i class="fas ${doc.icon}"></i> ${doc.label}`;
+      linksContainer.appendChild(a);
+    });
+  }
+  if (project.github && project.github !== "#") {
+    const githubLink = document.createElement("a");
+    githubLink.href = project.github;
+    githubLink.target = "_blank";
+    githubLink.rel = "noopener noreferrer";
+    githubLink.className = "modal-btn";
+    githubLink.innerHTML = '<i class="fab fa-github"></i> View on GitHub';
+    linksContainer.appendChild(githubLink);
+  }
 
   const screenshotsDiv = document.getElementById("modalScreenshots");
   screenshotsDiv.innerHTML = "";
+  screenshotsDiv.style.display = project.screenshots.length > 0 ? "" : "none";
   project.screenshots.forEach((screenshot) => {
     const img = document.createElement("img");
     img.src = screenshot;
@@ -426,6 +405,66 @@ function viewCertificate(certId) {
   const certImage = certificateImages[index];
   document.getElementById("certFullImage").src = certImage;
   document.getElementById("certificateModal").style.display = "block";
+  document.body.style.overflow = "hidden";
+}
+
+function viewCertificateByPath(imageSrc) {
+  document.getElementById("certFullImage").src = imageSrc;
+  document.getElementById("certFullImage").alt = "Certificate";
+  document.getElementById("certificateModal").style.display = "block";
+  document.body.style.overflow = "hidden";
+}
+
+// ========== RHB PHOTO GALLERY ==========
+const rhbGalleries = {
+  "rhb-mentor": {
+    title: "RHB X-CEL Star Mentoring Programme FY2023: Midpoint Check-in",
+    images: [
+      "assets/images/rhb/mentor/IMG-20230722-WA0020.jpg",
+      "assets/images/rhb/mentor/IMG_20230721_112440.jpg",
+      "assets/images/rhb/mentor/IMG-20230722-WA0021.jpg",
+      "assets/images/rhb/mentor/IMG-20230722-WA0025.jpg",
+      "assets/images/rhb/mentor/IMG_20230721_133445.jpg",
+    ],
+  },
+  "rhb-award": {
+    title: "Majlis Anugerah Biasiswa RHB X-Cel Star",
+    images: [
+      "assets/images/rhb/award/KAL_9318.JPG",
+      "assets/images/rhb/award/KAL_9413.JPG",
+      "assets/images/rhb/award/KAL_9321.JPG",
+      "assets/images/rhb/award/IMG_20230222_152104.jpg",
+      "assets/images/rhb/award/IMG_20230222_164618.jpg",
+    ],
+  },
+  "rhb-english": {
+    title: "RHB X-Cel Star English Communications & Confidence Training",
+    images: [
+      "assets/images/rhb/english-training/DIN_6356.JPG",
+      "assets/images/rhb/english-training/DIN_6054.JPG",
+      "assets/images/rhb/english-training/DIN_6153.JPG",
+      "assets/images/rhb/english-training/DIN_6163.JPG",
+      "assets/images/rhb/english-training/DIN_6258.JPG",
+      "assets/images/rhb/english-training/DIN_6337.JPG",
+      "assets/images/rhb/english-training/selfi.jpg",
+    ],
+  },
+};
+
+function openRHBGallery(galleryId) {
+  const gallery = rhbGalleries[galleryId];
+  if (!gallery) return;
+  document.getElementById("galleryModalTitle").textContent = gallery.title;
+  const grid = document.getElementById("galleryGrid");
+  grid.innerHTML = "";
+  gallery.images.forEach((src) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = gallery.title;
+    img.loading = "lazy";
+    grid.appendChild(img);
+  });
+  document.getElementById("galleryModal").style.display = "block";
   document.body.style.overflow = "hidden";
 }
 
