@@ -21,6 +21,56 @@ const certificateImages = [
 const projects = [
   {
     id: 1,
+    title: "Kitchen Whirl",
+    date: "March 2026",
+    type: "Recipe Management Mobile App",
+    category: "mobile",
+    icon: "fa-utensils",
+    description: `Developed a modern Flutter-based recipe management application with role-based access for admins and users, enabling recipe organization, advanced filtering, favorites, shopping list generation, cooking attempt logs, and recipe ratings. The app also features a full-screen cooking mode with timers and step-by-step guidance, while leveraging Hive for offline local storage and Provider for efficient state management to deliver a smooth and engaging user experience.`,
+    tech: [
+      "Flutter",
+      "Dart",
+      "Hive",
+      "Provider",
+      "Local Storage",
+      "Mobile UI/UX",
+    ],
+    github: "https://github.com/wanai220118/Kitchen_Whirl",
+    screenshots: [
+      "assets/images/project/kitchenwhirl-1.jpg",
+      "assets/images/project/kitchenwhirl-2.jpg",
+      "assets/images/project/kitchenwhirl-3.jpg",
+      "assets/images/project/kitchenwhirl-4.jpg",
+      "assets/images/project/kitchenwhirl-5.jpg",
+    ],
+  },
+  {
+    id: 2,
+    title: "Professional Calculator",
+    date: "February 2026",
+    type: "Desktop Application",
+    category: "web",
+    icon: "fa-calculator",
+    description: `Developed a feature-rich desktop calculator application using Python and PyQt5, designed for technical, academic, and professional use. The application supports arithmetic and scientific calculations, advanced mathematical functions, built-in constants, memory slot management, calculation history tracking, and export features. It also includes persistent local storage, real-time input validation, customizable themes, and user-friendly error handling to provide a polished and reliable user experience.`,
+    tech: [
+      "Python",
+      "PyQt5",
+      "Desktop App Development",
+      "GUI Design",
+      "Data Export",
+      "Local Storage",
+    ],
+    github: "https://github.com/wanai220118/calculator",
+    screenshots: [
+      "assets/images/project/calculator-1.png",
+      "assets/images/project/calculator-2.png",
+      "assets/images/project/calculator-3.png",
+      "assets/images/project/calculator-4.png",
+      "assets/images/project/calculator-5.png",
+    ],
+  },
+  {
+    id: 3,
     title: "CNC Menu and Ordering",
     date: "February 2026",
     type: "E-Commerce Website",
@@ -40,7 +90,7 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     title: "ZenFlow Tracker – Mobile Fitness Application",
     date: "February 2026",
     type: "Mobile Application (React Native)",
@@ -56,7 +106,7 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     title: "Sistem Pengurusan Peguam Syarie (Web-Based)",
     date: "August 2025 – January 2026",
     type: "Web Application",
@@ -76,7 +126,7 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     title: "Cheez n' Cream – Admin Mobile Application",
     date: "December 2025",
     type: "Mobile Application (Flutter & Firebase)",
@@ -95,7 +145,7 @@ const projects = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     title: "Personal Portfolio Website",
     date: "November 2025",
     type: "Web Application",
@@ -111,7 +161,7 @@ const projects = [
     ],
   },
   {
-    id: 6,
+    id: 8,
     title: "GlowGuide – E-Commerce & Consultation Mobile App",
     date: "October 2024 – June 2025",
     type: "Mobile & Web Application",
@@ -130,7 +180,7 @@ const projects = [
     ],
   },
   {
-    id: 10,
+    id: 12,
     title: "Image-Based Detection of Rice Leaf Diseases Using Deep CNN Models",
     date: "June 2025",
     type: "Machine Learning",
@@ -138,11 +188,12 @@ const projects = [
     icon: "fa-brain",
     description: `Implemented deep convolutional neural network (CNN) models to classify and detect rice leaf diseases from image data. Applied image preprocessing, training, and evaluation to develop an automated disease detection system with high accuracy.`,
     tech: ["Python", "TensorFlow", "CNN", "Image Processing"],
-    github: "https://github.com/wanai220118/Image-Based-Detection-of-Rice-Leaf-Diseases-Using-Deep-CNN-Models",
+    github:
+      "https://github.com/wanai220118/Image-Based-Detection-of-Rice-Leaf-Diseases-Using-Deep-CNN-Models",
     screenshots: ["assets/images/project/rice.png"],
   },
   {
-    id: 11,
+    id: 13,
     title: "Predicting Diabetes with Classification Algorithm",
     date: "May 2025",
     type: "Machine Learning",
@@ -150,11 +201,12 @@ const projects = [
     icon: "fa-heartbeat",
     description: `Built a predictive model using classification algorithms like Random Forest, Logistic Regression, and K-Nearest Neighbors (KNN) on a diabetes dataset. Applied data preprocessing, feature selection, and model evaluation techniques to improve prediction accuracy.`,
     tech: ["Python", "Scikit-learn", "Pandas", "Machine Learning"],
-    github: "https://github.com/wanai220118/Predicting-Diabetes-with-Classification-Algorithm",
+    github:
+      "https://github.com/wanai220118/Predicting-Diabetes-with-Classification-Algorithm",
     screenshots: ["assets/images/project/diabetes.png"],
   },
   {
-    id: 12,
+    id: 14,
     title: "Evaluating Shortest Path Solutions",
     date: "April 2025",
     type: "Algorithm Analysis",
@@ -162,7 +214,8 @@ const projects = [
     icon: "fa-route",
     description: `Analyzed and compared various shortest path algorithms such as Dijkstra's, Breadth First Search and Depth First Search for performance and efficiency. Evaluated algorithmic complexity and accuracy across different graph structures and datasets.`,
     tech: ["Python", "Algorithms", "Data Structures", "Graph Theory"],
-    github: "https://github.com/wanai220118/Evaluating-Shortest-Path-Solutions-A-Performance-Comparison-of-Dijkstra-BFS-and-DFS-Algorithms",
+    github:
+      "https://github.com/wanai220118/Evaluating-Shortest-Path-Solutions-A-Performance-Comparison-of-Dijkstra-BFS-and-DFS-Algorithms",
     screenshots: [
       "assets/images/project/bfs.png",
       "assets/images/project/dfs.png",
@@ -170,7 +223,7 @@ const projects = [
     ],
   },
   {
-    id: 7,
+    id: 9,
     title: "FRIENDS_WebApp",
     date: "January 2025",
     type: "Full-Stack Web Application",
@@ -182,7 +235,7 @@ const projects = [
     screenshots: ["assets/images/project/friends.png"],
   },
   {
-    id: 13,
+    id: 15,
     title: "Analyzing Air Quality And Health Impact In India",
     date: "January 2025",
     type: "Data Analytics",
@@ -192,12 +245,16 @@ const projects = [
     tech: ["Power BI", "DAX", "Data Analytics", "Visualization"],
     github: "#",
     documents: [
-      { label: "View PDF", url: "assets/pdf/g3report_datascience.pdf", icon: "fa-file-pdf" },
+      {
+        label: "View PDF",
+        url: "assets/pdf/g3report_datascience.pdf",
+        icon: "fa-file-pdf",
+      },
     ],
     screenshots: [],
   },
   {
-    id: 8,
+    id: 10,
     title: "E-KOOP Inventory Web Based System",
     date: "July 2024",
     type: "Web Application",
@@ -209,7 +266,7 @@ const projects = [
     screenshots: ["assets/images/project/ekoop.png"],
   },
   {
-    id: 9,
+    id: 11,
     title: "Tic-Tac-Toe Game App",
     date: "June 2024",
     type: "Desktop Application",
@@ -221,7 +278,7 @@ const projects = [
     screenshots: ["assets/images/project/ttt.png"],
   },
   {
-    id: 14,
+    id: 16,
     title: "SOHO & Campus Network Design",
     date: "June 2024",
     type: "Network Design",
@@ -231,14 +288,26 @@ const projects = [
     tech: ["Cisco Packet Tracer", "Network Design", "VLAN", "Security"],
     github: "#",
     documents: [
-      { label: "View PKT (Campus)", url: "assets/campusnetworkdesignforacollege-part2-group2-28s4-29.pkt", icon: "fa-file-alt" },
-      { label: "View PKT (Project)", url: "assets/projectv8.pkt", icon: "fa-file-alt" },
-      { label: "View PDF", url: "assets/pdf/reportcomputernetworkG1.pdf", icon: "fa-file-pdf" },
+      {
+        label: "View PKT (Campus)",
+        url: "assets/campusnetworkdesignforacollege-part2-group2-28s4-29.pkt",
+        icon: "fa-file-alt",
+      },
+      {
+        label: "View PKT (Project)",
+        url: "assets/projectv8.pkt",
+        icon: "fa-file-alt",
+      },
+      {
+        label: "View PDF",
+        url: "assets/pdf/reportcomputernetworkG1.pdf",
+        icon: "fa-file-pdf",
+      },
     ],
     screenshots: [],
   },
   {
-    id: 15,
+    id: 17,
     title: "Scripting & Server-Client Messaging in Virtual Machine",
     date: "January 2024",
     type: "Systems Programming",
@@ -248,12 +317,16 @@ const projects = [
     tech: ["Linux", "Shell Scripting", "Networking", "Virtual Machines"],
     github: "#",
     documents: [
-      { label: "View PDF", url: "assets/pdf/g12reportpdfver.pdf", icon: "fa-file-pdf" },
+      {
+        label: "View PDF",
+        url: "assets/pdf/g12reportpdfver.pdf",
+        icon: "fa-file-pdf",
+      },
     ],
     screenshots: [],
   },
   {
-    id: 16,
+    id: 18,
     title: "Depth First Search (Graph: Map Coloring)",
     date: "December 2023",
     type: "Algorithm Implementation",
@@ -268,7 +341,7 @@ const projects = [
     screenshots: [],
   },
   {
-    id: 17,
+    id: 19,
     title: "Network Setting In Virtual Machine",
     date: "October 2023",
     type: "System Configuration",
@@ -348,12 +421,10 @@ function openProjectModal(projectId) {
   if (!project) return;
 
   document.getElementById("modalTitle").textContent = project.title;
-  document.getElementById(
-    "modalDate"
-  ).innerHTML = `<i class="far fa-calendar"></i> ${project.date}`;
-  document.getElementById(
-    "modalType"
-  ).innerHTML = `<i class="fas fa-tag"></i> ${project.type}`;
+  document.getElementById("modalDate").innerHTML =
+    `<i class="far fa-calendar"></i> ${project.date}`;
+  document.getElementById("modalType").innerHTML =
+    `<i class="fas fa-tag"></i> ${project.type}`;
   document.getElementById("modalDescription").textContent = project.description;
 
   const linksContainer = document.getElementById("modalLinks");
@@ -520,7 +591,7 @@ themeToggle.addEventListener("click", () => {
   setTimeout(() => {
     themeIcon.classList.replace(
       isDark ? "fa-moon" : "fa-sun",
-      isDark ? "fa-sun" : "fa-moon"
+      isDark ? "fa-sun" : "fa-moon",
     );
     themeIcon.style.transform = "rotate(0deg)";
   }, 150);
@@ -639,7 +710,7 @@ window.addEventListener(
       scrollTopBtn.classList.remove("visible");
     }
   },
-  { passive: true }
+  { passive: true },
 );
 
 scrollTopBtn.addEventListener("click", () => {
@@ -670,7 +741,7 @@ window.addEventListener(
       }
     });
   },
-  { passive: true }
+  { passive: true },
 );
 
 // ========== MULTI-TEXT TYPING ANIMATION ==========
@@ -763,7 +834,7 @@ const statObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.5 },
 );
 
 statCards.forEach((card) => {
@@ -899,13 +970,13 @@ if (document.readyState === "loading") {
 // ========== CONSOLE SIGNATURE ==========
 console.log(
   "%c👋 Hello there!",
-  "font-size: 20px; font-weight: bold; color: #6366f1;"
+  "font-size: 20px; font-weight: bold; color: #6366f1;",
 );
 console.log(
   "%cThanks for checking out my portfolio!",
-  "font-size: 14px; color: #ec4899;"
+  "font-size: 14px; color: #ec4899;",
 );
 console.log(
   "%cFeel free to reach out if you'd like to collaborate!",
-  "font-size: 12px; color: #64748b;"
+  "font-size: 12px; color: #64748b;",
 );
