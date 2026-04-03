@@ -504,6 +504,14 @@ function viewCertificateByPath(imageSrc) {
 
 // ========== RHB PHOTO GALLERY ==========
 const rhbGalleries = {
+  "rhb-final": {
+    title: "RHB Mentoring Graduation",
+    images: [
+      "assets/images/rhb/final/mentoring-1.jpg",
+      "assets/images/rhb/final/mentoring-2.jpg",
+      "assets/images/rhb/final/mentoring-3.jpg",
+    ],
+  },
   "rhb-mentor": {
     title: "RHB X-CEL Star Mentoring Programme FY2023: Midpoint Check-in",
     images: [
