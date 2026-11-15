@@ -504,6 +504,10 @@ function viewCertificateByPath(imageSrc) {
 
 // ========== RHB PHOTO GALLERY ==========
 const rhbGalleries = {
+  "rhb-gathering2026": {
+    title: "RHB X-Cel Star Scholars Gathering 2026",
+    images: ["assets/images/rhb/final/comingsoon.jpg"],
+  },
   "rhb-final": {
     title: "RHB Mentoring Graduation",
     images: [
